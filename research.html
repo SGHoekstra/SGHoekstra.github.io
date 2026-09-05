@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research — Steven Hoekstra</title>
+  <meta name="description" content="Research by Steven Hoekstra: job market paper, working papers, work in progress, and software on agent-based macroeconomic modelling.">
+  <link rel="canonical" href="https://sghoekstra.github.io/research.html">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Steven Hoekstra</a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="index.html">About</a></li>
+        <li><a href="research.html" aria-current="page">Research</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="cv/Steven_Hoekstra_CV.pdf">CV</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <p class="eyebrow">Research</p>
+    <h1>Papers &amp; software</h1>
+    <p class="lede" style="margin-top:1rem">My work develops quantitative agent-based models of the macroeconomy and brings them to the data. I am particularly interested in combining the granular, stock-flow consistent structure of large-scale agent-based models with optimising, heterogeneous households, and in evaluating such models on their forecasting performance.</p>
+
+    <h2 id="jmp">Job market paper</h2>
+    <article class="paper">
+      <span class="award">Finalist, Society for Computational Economics student paper contest (CEF 2025, Santiago)</span>
+      <h3>Forecasting with a Dutch Agent-Based Model and Optimally Behaving Households</h3>
+      <!-- TODO: add co-authors if any -->
+      <p class="authors">Steven Hoekstra</p>
+      <p class="meta"><em>Job market paper</em> · Latest version: <!-- TODO: date -->September 2026</p>
+      <ul class="links">
+        <!-- TODO: add files under papers/ -->
+        <li><a href="papers/Hoekstra_JMP.pdf">Paper (PDF)</a></li>
+        <li><a href="papers/Hoekstra_JMP_slides.pdf">Slides</a></li>
+        <li><a href="https://github.com/SGHoekstra">Code</a></li>
+      </ul>
+      <details class="abstract" open>
+        <summary>Abstract</summary>
+        <!-- TODO: replace this draft with the abstract from the paper -->
+        <p>This paper develops a large-scale agent-based model of the Dutch economy and evaluates its usefulness for macroeconomic forecasting. I extend the stock-flow consistent agent-based model of Poledna, Miess, Hommes and Rabitsch (2023) and calibrate it to Dutch micro and macro data. In place of rule-of-thumb consumption behaviour, households solve the two-asset consumption–savings problem of Kaplan, Moll and Violante (2018), which generates a realistic distribution of marginal propensities to consume across liquid and illiquid wealth. I compare the out-of-sample forecasting performance of the model against standard macroeconometric benchmarks and show how optimising household behaviour changes the model's predictions for aggregate consumption and its response to policy.</p>
+      </details>
+    </article>
+
+    <h2>Working papers</h2>
+    <!-- TODO: add working papers. Copy the <article class="paper"> block below for each. -->
+    <article class="paper">
+      <h3>[Working paper title]</h3>
+      <p class="authors">Steven Hoekstra with [co-author]</p>
+      <p class="meta">[Status, e.g. Tinbergen Institute Discussion Paper 26-000] · [Month Year]</p>
+      <ul class="links">
+        <li><a href="#">Paper (PDF)</a></li>
+      </ul>
+      <details class="abstract">
+        <summary>Abstract</summary>
+        <p>[Abstract.]</p>
+      </details>
+    </article>
+
+    <h2>Work in progress</h2>
+    <ul class="clean">
+      <!-- TODO: list ongoing projects -->
+      <li><strong>[Project title]</strong> <span class="muted">(with [co-author])</span><br><span class="small muted">[One sentence on the question and approach.]</span></li>
+      <li><strong>[Project title]</strong><br><span class="small muted">[One sentence on the question and approach.]</span></li>
+    </ul>
+
+    <h2>Software</h2>
+    <ul class="clean">
+      <li>
+        <strong><a href="https://github.com/bancaditalia/BeforeIT.jl">BeforeIT.jl</a></strong> <span class="muted">— contributor</span><br>
+        <span class="small">A high-performance Julia implementation of the macroeconomic agent-based model of Poledna et al. (2023), developed at Banca d'Italia. I use and contribute to the package for my own work on the Dutch economy.</span>
+      </li>
+      <li>
+        <strong><a href="https://github.com/SGHoekstra/CalibrateBeforeIT.jl">CalibrateBeforeIT.jl</a></strong><br>
+        <span class="small">Calibration routines for BeforeIT.jl models, used to bring the model to national accounts and micro data.</span>
+      </li>
+    </ul>
+
+    <h2>Presentations</h2>
+    <!-- TODO: verify and extend -->
+    <ul class="clean">
+      <li>2025 &nbsp;·&nbsp; Computing in Economics and Finance (CEF), Society for Computational Economics, Santiago</li>
+      <li>2023 &nbsp;·&nbsp; Tinbergen Institute, Amsterdam — <em>A Dutch Agent-Based Model Calibrated with Microdata</em></li>
+    </ul>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Steven Hoekstra</span>
+    <span>Last updated September 2026 · <a href="https://github.com/SGHoekstra/SGHoekstra.github.io">Source</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
