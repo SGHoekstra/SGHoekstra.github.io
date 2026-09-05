@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Research — Steven Hoekstra</title>
-  <meta name="description" content="Research by Steven Hoekstra: job market paper, working papers, work in progress, and software on agent-based macroeconomic modelling.">
+  <meta name="description" content="Research by Steven Hoekstra: job market paper, work in progress, software and presentations on agent-based and heterogeneous-agent macroeconomic modelling.">
   <link rel="canonical" href="https://sghoekstra.github.io/research.html">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,15 +33,16 @@
 
     <p class="eyebrow">Research</p>
     <h1>Papers &amp; software</h1>
-    <p class="lede" style="margin-top:1rem">My work develops quantitative agent-based models of the macroeconomy and brings them to the data. I am particularly interested in combining the granular, stock-flow consistent structure of large-scale agent-based models with optimising, heterogeneous households, and in evaluating such models on their forecasting performance.</p>
+    <p class="lede" style="margin-top:1rem">My research views macroeconomics through the lens of complex systems. I have worked with both heterogeneous-agent equilibrium models and large-scale agent-based models, and my aim is to use the insights of both to better understand macroeconomic phenomena, using theory, large-scale computational modelling and empirical methods.</p>
 
     <h2 id="jmp">Job market paper</h2>
     <article class="paper">
-      <span class="award">Finalist, Society for Computational Economics student paper contest (CEF 2025, Santiago)</span>
-      <h3>Forecasting with a Dutch Agent-Based Model and Optimally Behaving Households</h3>
+      <!-- TODO: confirm the exact name of the SCE contest and the outcome -->
+      <span class="award">Finalist, Society for Computational Economics student paper contest, CEF 2025</span>
+      <h3>A Dutch Agent-Based Model with Optimal Consumption</h3>
       <!-- TODO: add co-authors if any -->
       <p class="authors">Steven Hoekstra</p>
-      <p class="meta"><em>Job market paper</em> · Latest version: <!-- TODO: date -->September 2026</p>
+      <p class="meta"><em>Job market paper</em> · Working paper · Earlier version circulated as <em>Forecasting with a Dutch Agent-Based Model and Optimally Behaving Households</em></p>
       <ul class="links">
         <!-- TODO: add files under papers/ -->
         <li><a href="papers/Hoekstra_JMP.pdf">Paper (PDF)</a></li>
@@ -50,38 +51,21 @@
       </ul>
       <details class="abstract" open>
         <summary>Abstract</summary>
-        <!-- TODO: replace this draft with the abstract from the paper -->
-        <p>This paper develops a large-scale agent-based model of the Dutch economy and evaluates its usefulness for macroeconomic forecasting. I extend the stock-flow consistent agent-based model of Poledna, Miess, Hommes and Rabitsch (2023) and calibrate it to Dutch micro and macro data. In place of rule-of-thumb consumption behaviour, households solve the two-asset consumption–savings problem of Kaplan, Moll and Violante (2018), which generates a realistic distribution of marginal propensities to consume across liquid and illiquid wealth. I compare the out-of-sample forecasting performance of the model against standard macroeconometric benchmarks and show how optimising household behaviour changes the model's predictions for aggregate consumption and its response to policy.</p>
-      </details>
-    </article>
-
-    <h2>Working papers</h2>
-    <!-- TODO: add working papers. Copy the <article class="paper"> block below for each. -->
-    <article class="paper">
-      <h3>[Working paper title]</h3>
-      <p class="authors">Steven Hoekstra with [co-author]</p>
-      <p class="meta">[Status, e.g. Tinbergen Institute Discussion Paper 26-000] · [Month Year]</p>
-      <ul class="links">
-        <li><a href="#">Paper (PDF)</a></li>
-      </ul>
-      <details class="abstract">
-        <summary>Abstract</summary>
-        <p>[Abstract.]</p>
+        <p>We develop an extension of the stock-flow consistent agent-based model of Poledna et al. (2023) by introducing the household optimisation problem of Kaplan et al. (2018), which allows for heterogeneous marginal propensities to consume. We use a neural network approach to recalculate the solution of the optimisation problem each period for all Monte Carlo simulations, totalling more than 100,000 re-optimisations. Household agents make optimal choices given their perceived laws of motion, which we model with an AR(1) rule, and update their optimal choices each period as new information arrives. We analyse the model by means of a forecasting exercise in which we compare it to the base version of the agent-based model, a version of the agent-based model with a more complex consumption heuristic, and a benchmark VAR model. We calibrate the model for the Dutch economy and forecast the Dutch economy. The optimal consumption model has better forecast performance than the benchmark VAR, the base agent-based model and the extended-heuristic agent-based model.</p>
       </details>
     </article>
 
     <h2>Work in progress</h2>
     <ul class="clean">
-      <!-- TODO: list ongoing projects -->
-      <li><strong>[Project title]</strong> <span class="muted">(with [co-author])</span><br><span class="small muted">[One sentence on the question and approach.]</span></li>
-      <li><strong>[Project title]</strong><br><span class="small muted">[One sentence on the question and approach.]</span></li>
+      <!-- TODO: confirm this can be listed publicly, and add any other ongoing projects -->
+      <li><strong>Inflation channels in a CANVAS-type agent-based model of the Netherlands</strong> <span class="muted">(De Nederlandsche Bank)</span><br><span class="small muted">An implementation of the Bank of Canada's CANVAS model for the Dutch economy, with the wage–price channel estimated by neural ratio estimation.</span></li>
     </ul>
 
     <h2>Software</h2>
     <ul class="clean">
       <li>
         <strong><a href="https://github.com/bancaditalia/BeforeIT.jl">BeforeIT.jl</a></strong> <span class="muted">— contributor</span><br>
-        <span class="small">A high-performance Julia implementation of the macroeconomic agent-based model of Poledna et al. (2023), developed at Banca d'Italia. I use and contribute to the package for my own work on the Dutch economy.</span>
+        <span class="small">A high-performance Julia implementation of the macroeconomic agent-based model of Poledna et al. (2023), developed at Banca d'Italia. I use and contribute to the package for my work on the Dutch economy.</span>
       </li>
       <li>
         <strong><a href="https://github.com/SGHoekstra/CalibrateBeforeIT.jl">CalibrateBeforeIT.jl</a></strong><br>
@@ -94,6 +78,13 @@
     <ul class="clean">
       <li>2025 &nbsp;·&nbsp; Computing in Economics and Finance (CEF), Society for Computational Economics, Santiago</li>
       <li>2023 &nbsp;·&nbsp; Tinbergen Institute, Amsterdam — <em>A Dutch Agent-Based Model Calibrated with Microdata</em></li>
+    </ul>
+
+    <h2>Theses</h2>
+    <ul class="clean">
+      <li><em>An Agent-Based Model of the Dutch Economy</em> <span class="small muted">— MPhil thesis, Tinbergen Institute, 2023. Supervisors: Cars Hommes and Frank Pijpers.</span></li>
+      <li><em>Endogenous Financial Instability via Heterogeneous Beliefs</em> <span class="small muted">— MSc thesis, University of Amsterdam, 2021. Supervisor: Cars Hommes.</span></li>
+      <li><em>The Inequality of Education Using a Two-Agent New Keynesian Model</em> <span class="small muted">— MSc thesis, London School of Economics, 2020. Supervisor: Frank Cowell.</span></li>
     </ul>
 
   </div>
