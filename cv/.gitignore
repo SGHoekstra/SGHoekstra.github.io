@@ -1,0 +1,7 @@
+# pdflatex build artefacts; the PDF itself is committed because the site serves it
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz

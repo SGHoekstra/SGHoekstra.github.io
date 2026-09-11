@@ -1,0 +1,173 @@
+% Curriculum Vitae — Steven Hoekstra
+% Build:  pdflatex -jobname=Steven_Hoekstra_CV cv.tex   (run from the cv/ directory)
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=2.3cm,bottom=2.0cm]{geometry}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{rule}{HTML}{B9BCC2}
+\definecolor{accent}{HTML}{1D4F91}
+\hypersetup{
+  pdftitle={Curriculum Vitae - Steven Hoekstra},
+  pdfauthor={Steven Hoekstra},
+  colorlinks=true, urlcolor=accent, linkcolor=accent
+}
+
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+% --- helpers ---------------------------------------------------------------
+% \par before any vertical space: \vspace is ignored in horizontal mode, which
+% is what collapsed the gaps between entries. \parfillskip=0pt lets \hfill push
+% the date to the right margin on a paragraph's last line.
+% Keep a section heading with at least the first lines that follow it, so a
+% heading never sits alone at the foot of a page. (needspace is not in the
+% installed TeX set, so this is the classic reserve-then-unreserve trick.)
+\newlength{\nsdim}
+\newcommand{\needspace}[1]{%
+  \par\begingroup\setlength{\nsdim}{#1}%
+  \vskip\nsdim\penalty-100\vskip-\nsdim\endgroup%
+}
+\newcommand{\cvsection}[1]{%
+  \par\needspace{5\baselineskip}%
+  \vspace{1.1em}\noindent{\large\bfseries #1}%
+  \par\vspace{0.25em}\noindent{\color{rule}\hrule height 0.6pt}%
+  \par\vspace{0.6em}%
+}
+\newcommand{\entry}[2]{\par\vspace{0.55em}\noindent{\parfillskip=0pt\relax\textbf{#1}\hfill{\small #2}\par}}
+\newcommand{\titleonly}[1]{\par\vspace{0.55em}\noindent\textbf{#1}\par}
+\newcommand{\note}[1]{\par\noindent{\small #1}}
+\newcommand{\subhead}[1]{\par\vspace{0.75em}\noindent\textit{#1}\par\vspace{0.1em}}
+
+\begin{document}
+
+% --- header ----------------------------------------------------------------
+{\Huge\bfseries Steven Hoekstra}\\[0.45em]
+{\small
+PhD Candidate in Economics, University of Amsterdam \& Tinbergen Institute\\
+\href{mailto:s.g.hoekstra@uva.nl}{s.g.hoekstra@uva.nl} \quad$\cdot$\quad
+\href{https://sghoekstra.github.io}{sghoekstra.github.io} \quad$\cdot$\quad
+\href{https://github.com/SGHoekstra}{github.com/SGHoekstra}
+}
+
+\cvsection{Profile}
+My research is focussed on macroeconomics viewed through the lens of complex systems. I have
+gained experience in both equilibrium and agent-based modelling through my academic pursuits.
+My objective is to use insights of both subfields to find a better understanding of
+macroeconomic phenomena using theory, large scale computational modelling, and empirical
+methods.
+
+\cvsection{Interests}
+Complexity, macroeconomics, bounded rationality, agent-based modelling, networks, distributed
+computing, heterogeneous agent equilibrium models.
+
+\cvsection{Education}
+\entry{PhD in Economics --- University of Amsterdam}{2023 --- current}
+\note{Supervisors: Prof.\ dr.\ C.H. Hommes and Prof.\ dr.\ F.P. Pijpers}
+\entry{MPhil Economics and Econometrics --- Tinbergen Institute \textit{(cum laude)}}{2021 --- 2023}
+\note{Specialisation: Complexity, Mathematics, and Computation}
+\note{Thesis: An Agent Based Model of the Dutch Economy}
+\note{Supervisors: Prof.\ dr.\ C.H. Hommes and Prof.\ dr.\ F.P. Pijpers}
+\entry{MSc Econometrics --- University of Amsterdam \textit{(cum laude)}}{2020 --- 2021}
+\note{Specialisation: Complexity and Economic Behaviour}
+\note{Thesis: Endogenous Financial Instability via Heterogeneous Beliefs}
+\note{Supervisor: Prof.\ dr.\ C.H. Hommes}
+\entry{MSc Economics --- London School of Economics}{2019 --- 2020}
+\note{Specialisation: Public Economics}
+\note{Thesis: The Inequality of Education using a Two Agent New Keynesian Model}
+\note{Supervisor: Prof.\ dr.\ F. Cowell}
+\entry{Exchange Programme --- Royal Melbourne Institute of Technology}{2018 --- 2019}
+\note{Minor in Finance and Programming}
+\entry{BSc Economics and Business Economics --- University of Groningen}{2016 --- 2019}
+\note{Thesis: The Impact of News Coverage on Security Prices}
+\entry{BSc Econometrics --- University of Groningen}{2015 --- 2018}
+\note{Thesis: Arbitrage Smoothing and Term Structure Models}
+
+\cvsection{Working Papers}
+\titleonly{Forecasting with a Dutch Agent-Based Model and Optimally Behaving Households}
+\note{with Cars Hommes and Frank Pijpers}
+\note{Finalist, Society for Computational Economics student paper contest, CEF 2026}
+\titleonly{BeforeIT.jl: High-Performance Agent-Based Macroeconomics Made Easy}
+\note{with Adriano Meligrana, Mitja Devetak, Sebastian Poledna, Oliver Reiter and Aldo Glielmo}
+
+\cvsection{Work in Progress}
+\titleonly{Estimation, Forecasting and Parameter Constancy in a Dutch Agent-Based Model}
+\titleonly{An Agent-Based Model of the Housing Market}
+
+\cvsection{Presentations}
+\begin{tabularx}{\linewidth}{@{}p{1.6cm}X@{}}
+2026 & Computing in Economics and Finance (CEF), Society for Computational Economics\\[0.15em]
+2026 & Workshop on Economic Science with Heterogeneous Interacting Agents (WEHIA)\\[0.15em]
+2025 & Agent-Based Modelling for Policy (ABM4Policy), European Central Bank, Frankfurt\\[0.15em]
+2025 & 7th Behavioral Macroeconomics Workshop, University of Bamberg\\[0.15em]
+2025 & MacroABM 2nd Workshop, \textit{Microdata in Macromodels}, Vienna University of Economics and Business\\[0.15em]
+2025 & Workshop on Economic Science with Heterogeneous Interacting Agents (WEHIA)\\[0.15em]
+2025 & De Nederlandsche Bank, Amsterdam\\[0.15em]
+2023 & De Nederlandsche Bank, Amsterdam\\
+\end{tabularx}
+
+\cvsection{Work Experience}
+\entry{De Nederlandsche Bank --- PhD Intern}{Apr.\ --- Dec.\ 2025}
+\note{$\cdot$ Implemented the Bank of Canada CANVAS agent-based model for the Netherlands}
+\note{$\cdot$ Estimated inflation channels using neural ratio estimation}
+\note{$\cdot$ Wrote a note on the wage-price channel using this estimated model}
+\entry{Statistics Netherlands (CBS) --- Thesis Intern}{Mar.\ --- Sept.\ 2023}
+\note{$\cdot$ Calibrated the agent-based model of Poledna et al.\ (2023) with Dutch register and national accounts data}
+\note{$\cdot$ Developed an extension incorporating optimal consumption}
+\note{$\cdot$ Ran simulations with both models and analysed their internal dynamics}
+\entry{SEO Amsterdam Economics --- Research Assistant}{2020 --- 2021}
+\note{$\cdot$ Researched academic pressure among secondary school students}
+\note{$\cdot$ Conducted stakeholder interviews and set up a nationwide survey}
+\note{$\cdot$ Performed statistical analysis on the survey outcomes}
+
+\cvsection{Teaching}
+\subhead{Graduate}
+\entry{Behavioural Macro and Finance --- Lecturer}{2025}
+\subhead{Undergraduate}
+\entry{Mathematics 3: Advanced Linear Algebra --- Tutor}{2025 --- 2026}
+\entry{Mathematics 2: Linear Algebra --- Tutor}{2024 --- 2025}
+\entry{Microeconomics for AE --- Tutor}{2023 --- 2024}
+
+\cvsection{Achievements}
+\subhead{Honours}
+\entry{Cum Laude --- MPhil Economics and Econometrics, Tinbergen Institute}{2023}
+\entry{Cum Laude --- MSc Econometrics, University of Amsterdam}{2021}
+\subhead{Scholarships}
+\entry{Full scholarship (merit based) --- Tinbergen Institute}{2022}
+\entry{Tuition fee waiver --- Tinbergen Institute}{2021 --- 2023}
+
+\cvsection{Visits and Summer Schools}
+\entry{Visiting Scholar --- IIASA, Laxenburg}{Aug.\ 2023}
+\note{International Institute for Applied Systems Analysis. Visited Dr.\ S. Poledna to work on agent-based models}
+\entry{Tools for Macroeconomists: Advanced Tools --- University of Oxford}{Aug.\ 2021}
+\note{Doctoral-level course on DSGE models: solving and simulating models with heterogeneous
+agents, continuous time models, occasionally binding constraints and bounded rationality}
+\entry{Tools for Macroeconomists: The Essentials --- University of Oxford}{Aug.\ 2021}
+\note{Doctoral-level course on DSGE models: numerical analysis, perturbation and projection
+methods, Blanchard-Kahn conditions and sunspot solutions, the Kalman filter and Bayesian
+estimation}
+
+\cvsection{Skills}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{5.1cm}X@{}}
+Programming & Matlab, Python, R, Julia, C, SQL, Bash\\[0.15em]
+High-performance computing & Parallel computing (MPI, BSPlib)\\[0.15em]
+Methods & Agent-based modelling, network methods, machine learning, econometrics,
+dynamic stochastic general equilibrium modelling\\[0.15em]
+Packages & Dynare, Stata\\
+\end{tabularx}
+
+\cvsection{References}
+\begin{tabularx}{\linewidth}{@{}XX@{}}
+\textbf{Prof.\ dr.\ C.H. Hommes} & \textbf{Prof.\ dr.\ F.P. Pijpers}\\
+{\small CeNDEF, Faculty of Economics,} & {\small Korteweg-de Vries Institute,}\\
+{\small University of Amsterdam} & {\small Faculty of Science, University of Amsterdam}\\
+{\small Bank of Canada, Tinbergen Institute} & {\small Statistics Netherlands}\\
+{\small \href{mailto:c.h.hommes@uva.nl}{c.h.hommes@uva.nl}} &
+{\small \href{mailto:f.p.pijpers@uva.nl}{f.p.pijpers@uva.nl}}\\
+\end{tabularx}
+
+\end{document}
