@@ -23,7 +23,7 @@ Plain HTML and CSS, no build step. Edit a file, commit, push; GitHub Pages deplo
 3. **Award wording.** Confirm the Society for Computational Economics contest name and outcome on the badge in `research.html`, or remove the badge.
 4. **Housing abstract.** That manuscript's abstract is still `TBD`; the site currently shows a summary written from its introduction. Swap in the real abstract when it exists.
 5. **Presentations.** Verify the two entries, and decide whether to add the WEHIA 2026 and Ortec talks.
-6. **BeforeIT preprint.** The posted PDF's footer still reads "Preprint submitted to X". Replace it once the target journal is filled in.
+6. **BeforeIT preprint.** Only the abstract is posted. Add the PDF to `papers/` and link it once the footer names the target journal.
 7. **Last updated.** The footer date on every page.
 
 ## Previewing locally
