@@ -60,6 +60,7 @@ h2 { font-size: 1.45rem; margin-top: 3rem; margin-bottom: 1rem; padding-bottom: 
 h3 { font-size: 1.12rem; }
 p { margin: 0 0 1rem; }
 .lede { font-size: 1.05rem; }
+h1 + .lede { margin-top: 1rem; }
 .muted { color: var(--muted); }
 .small { font-size: 0.9rem; }
 .sans { font-family: var(--sans); }
@@ -112,6 +113,19 @@ details.abstract p { margin: 0.6rem 0 0; color: #333; }
   display: inline-block; font-family: var(--sans); font-size: 0.78rem; font-weight: 500;
   color: #6b4a00; background: #fbf3dc; border-radius: 999px; padding: 0.15rem 0.6rem; margin-bottom: 0.5rem;
 }
+
+/* Course page -------------------------------------------------------- */
+h3 { margin-bottom: 0.45rem; }
+h3.sub { margin-top: 1.75rem; }
+.course-meta {
+  font-family: var(--sans); font-size: 0.86rem; color: var(--muted); margin: 0 0 1rem;
+}
+pre.shell {
+  overflow-x: auto; background: var(--bg-soft); border: 1px solid var(--line);
+  border-radius: 6px; padding: 0.85rem 1rem; font-size: 0.82rem; margin: 0 0 1rem;
+}
+pre.shell code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+ul.notebooks li { margin-bottom: 0.8rem; }
 
 /* Lists ------------------------------------------------------------- */
 ul.clean { list-style: none; padding: 0; margin: 0; }

@@ -33,15 +33,39 @@
 
     <p class="eyebrow">Teaching</p>
     <h1>Teaching</h1>
-    <p class="lede" style="margin-top:1rem">I lecture the graduate course Behavioural Macro and Finance at the University of Amsterdam and have tutored undergraduate microeconomics and linear algebra. I like to give students working code alongside the theory, so that models become something they can run, break and extend.</p>
+    <p class="lede">I lecture the graduate course Behavioural Macro and Finance at the University of Amsterdam and have tutored undergraduate microeconomics and linear algebra. I like to give students working code alongside the theory, so that models become something they can run, break and extend.</p>
 
-    <h2>Graduate</h2>
-    <dl class="rows">
-      <div>
-        <dt>2025</dt>
-        <dd><strong>Behavioural Macro and Finance</strong> <span class="muted">(MSc)</span><br><span class="small muted">Lecturer · University of Amsterdam</span><br><span class="small"><a href="https://github.com/SGHoekstra/Behavioural_Macro_and_Finance">Course code and exercises on GitHub</a></span></dd>
-      </div>
-    </dl>
+    <h2>Behavioural Macro and Finance</h2>
+    <p class="course-meta">MSc, University of Amsterdam &nbsp;·&nbsp; Lecturer &nbsp;·&nbsp; 2025</p>
+    <p>A computational course on agent-based macroeconomics. Students work through a sequence of <a href="https://plutojl.org/">Pluto</a> notebooks in Julia, built on <a href="https://github.com/bancaditalia/BeforeIT.jl">BeforeIT.jl</a>, and move from running a pre-calibrated model of a whole economy to extending it and estimating its behavioural parameters. All material is on <a href="https://github.com/SGHoekstra/Behavioural_Macro_and_Finance">GitHub</a>.</p>
+
+    <h3 class="sub">Notebooks</h3>
+    <ul class="clean notebooks">
+      <li><a href="https://github.com/SGHoekstra/Behavioural_Macro_and_Finance/blob/main/pluto_tutorial/00_julia_pluto_primer.jl"><strong>Julia and Pluto primer</strong></a><br><span class="small muted">Variables, types and the reactive notebook model, enough Julia to read the rest.</span></li>
+      <li><a href="https://github.com/SGHoekstra/Behavioural_Macro_and_Finance/blob/main/pluto_tutorial/01_quickstart.jl"><strong>Quickstart</strong></a><br><span class="small muted">Load the fully calibrated Austria 2010Q1 parametrisation and run the model for the first time.</span></li>
+      <li><a href="https://github.com/SGHoekstra/Behavioural_Macro_and_Finance/blob/main/pluto_tutorial/02_model_anatomy.jl"><strong>Model anatomy</strong></a><br><span class="small muted">Who the agents are, and reproducing the roughly 9.9 million agents of the Austrian economy from the model itself.</span></li>
+      <li><a href="https://github.com/SGHoekstra/Behavioural_Macro_and_Finance/blob/main/pluto_tutorial/03_calibration_and_data.jl"><strong>Calibration and data</strong></a><br><span class="small muted">Almost every parameter is read straight from national accounts. Only the AR(1) expectations and the Taylor rule are estimated, which is the opposite of a DSGE model.</span></li>
+      <li><a href="https://github.com/SGHoekstra/Behavioural_Macro_and_Finance/blob/main/pluto_tutorial/04_shocks_and_cascades.jl"><strong>Shocks and cascades</strong></a><br><span class="small muted">Design a shock with the interactive controls and watch the GDP impulse response propagate.</span></li>
+      <li><a href="https://github.com/SGHoekstra/Behavioural_Macro_and_Finance/blob/main/pluto_tutorial/05_expectations_and_policy.jl"><strong>Expectations and policy</strong></a><br><span class="small muted">Compare AR(1) and backward-looking expectations, and see what the choice does to policy.</span></li>
+      <li><a href="https://github.com/SGHoekstra/Behavioural_Macro_and_Finance/blob/main/pluto_tutorial/06_forecasting.jl"><strong>Forecasting</strong></a><br><span class="small muted">Monte Carlo fan charts, asking what the model would have predicted from 2010Q1.</span></li>
+      <li><a href="https://github.com/SGHoekstra/Behavioural_Macro_and_Finance/blob/main/pluto_tutorial/07_extensions_canvas.jl"><strong>Extending the model: CANVAS</strong></a><br><span class="small muted">Implement the CANVAS extension on top of the base model.</span></li>
+      <li><a href="https://github.com/SGHoekstra/Behavioural_Macro_and_Finance/blob/main/pluto_tutorial/08_snpe_calibration.jl"><strong>Simulation-based calibration</strong></a><br><span class="small muted">Estimate behavioural parameters with sequential neural posterior estimation.</span></li>
+      <li><a href="https://github.com/SGHoekstra/Behavioural_Macro_and_Finance/blob/main/pluto_tutorial/cheatsheet.jl"><strong>Cheatsheet</strong></a><br><span class="small muted">A quick reference to keep open in a second tab.</span></li>
+    </ul>
+
+    <h3 class="sub">Running the notebooks</h3>
+    <p class="small">Julia 1.10 or later. From the <code>pluto_tutorial</code> folder, install the environment once, then launch Pluto and open the notebooks in order.</p>
+    <pre class="shell"><code>julia setup.jl
+julia --project=@. -t auto -e 'using Pluto; Pluto.run()'</code></pre>
+
+    <h3 class="sub">Lectures</h3>
+    <!-- TODO: the slide PDFs are not on GitHub yet. The folders lecture_1_intro_abm and
+         lecture_2_sfc_abm were committed as nested-repository pointers, so they are empty
+         on GitHub. Once the PDFs are pushed, link them here. -->
+    <ul class="clean">
+      <li><strong>Lecture 1</strong> &nbsp;·&nbsp; Introduction to agent-based models</li>
+      <li><strong>Lecture 2</strong> &nbsp;·&nbsp; Stock-flow consistent agent-based models</li>
+    </ul>
 
     <h2>Undergraduate</h2>
     <dl class="rows">
