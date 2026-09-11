@@ -22,7 +22,7 @@ Plain HTML and CSS, no build step. Edit a file, commit, push; GitHub Pages deplo
 2. **CV.** The CV still lists the working paper under its old title, *A Dutch Agent Based Model with Optimal Consumption*, and omits the co-authors. The paper is now *Forecasting with a Dutch Agent-Based Model and Optimally Behaving Households*, with Cars Hommes and Frank Pijpers.
 3. **Award wording.** Confirm the Society for Computational Economics contest name and outcome on the badge in `research.html`, or remove the badge.
 4. **Housing abstract.** That manuscript's abstract is still `TBD`, so the site shows a summary from its introduction, labelled Summary rather than Abstract. Swap in the real abstract when it exists.
-5. **Presentations.** Verify the two entries, and decide whether to add the WEHIA 2026 and Ortec talks.
+5. **Presentations.** Only verifiable entries are listed. The Ortec and wage-price short decks have placeholder dates in their sources; add them with real venues and years, plus any seminars not captured here.
 6. **Wage-price abstract.** The posted text is the manuscript abstract with its numeric macros resolved. One trailing `\tbd{...}` marker was dropped; re-check the wording after the final refit.
 7. **BeforeIT preprint.** Only the abstract is posted. Add the PDF to `papers/` and link it once the footer names the target journal.
 8. **Last updated.** The footer date on every page.
