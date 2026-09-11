@@ -51,6 +51,20 @@
       </details>
     </article>
 
+    <article class="paper" id="beforeit">
+      <h3>BeforeIT.jl: High-Performance Agent-Based Macroeconomics Made Easy</h3>
+      <p class="authors">Adriano Meligrana, Mitja Devetak, Steven Hoekstra, Sebastian Poledna, Oliver Reiter and Aldo Glielmo</p>
+      <p class="meta">Preprint</p>
+      <ul class="links">
+        <li><a href="papers/beforeit-jl.pdf">Paper (PDF)</a></li>
+        <li><a href="https://github.com/bancaditalia/BeforeIT.jl">Package</a></li>
+      </ul>
+      <details class="abstract">
+        <summary>Abstract</summary>
+        <p>BeforeIT is an open-source software for building and simulating state-of-the-art macroeconomic agent-based models based on the macro agent-based model of Poledna et al. (2023), here referred to as the base model. Written in Julia, it combines extraordinary computational efficiency with user-friendliness and extensibility. We present the main structure of the software, demonstrate its ease of use with illustrative examples, and benchmark its performance. Our benchmarks demonstrate that the base model built with BeforeIT is orders of magnitude faster than its original Matlab implementation, while achieving performance comparable to a highly optimised HPC implementation. BeforeIT is designed to facilitate reproducibility, extensibility, and experimentation. As the first open-source, industry-grade software to build macro agent-based models, BeforeIT can significantly foster collaboration and innovation in the field of agent-based macroeconomic modelling.</p>
+      </details>
+    </article>
+
     <h2 id="work-in-progress">Work in progress</h2>
     <article class="paper" id="wage-price">
       <h3>Estimation, Forecasting and Parameter Constancy in a Dutch Agent-Based Model</h3>
@@ -75,11 +89,8 @@
     <h2>Software</h2>
     <ul class="clean">
       <li>
-        <strong><a href="https://github.com/bancaditalia/BeforeIT.jl">BeforeIT.jl</a></strong> <span class="muted">— contributor</span><br>
+        <strong><a href="https://github.com/bancaditalia/BeforeIT.jl">BeforeIT.jl</a></strong> <span class="muted">— co-author, see <a href="#beforeit">the paper</a></span><br>
         <span class="small">The Bank of Italy's high-performance Julia framework for macroeconomic agent-based modelling, implementing the model of Poledna et al. (2023). I contributed the CANVAS model implementation, an AR(1) growth-rate model variant, a multi-country forecast evaluation pipeline, and HP-filter and correlation diagnostics.</span>
-        <!-- TODO: the upstream repository lists the package authors as Glielmo, Devetak, Meligrana
-             and Poledna, and credits you under acknowledgements. If you are an author on a newer
-             version of the BeforeIT.jl paper, say which one and this becomes an authored entry. -->
       </li>
       <li>
         <strong><a href="https://github.com/SGHoekstra/CalibrateBeforeIT.jl">CalibrateBeforeIT.jl</a></strong><br>
