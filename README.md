@@ -23,7 +23,7 @@ Search the HTML for `TODO`. Each one marks something to fill in or confirm:
 1. **Photo.** Replace `assets/img/portrait.svg` with a real photo and update the `<img>` in `index.html` (ideally 4:5 aspect ratio, around 500×625 px).
 2. **Paper PDFs.** Add `papers/Hoekstra_JMP.pdf` and `papers/Hoekstra_JMP_slides.pdf`, or change the links.
 3. **Job market paper.** Confirm the co-author line and the wording of the SCE contest award in `research.html`.
-4. **Work in progress.** Titles and authors now come from the manuscripts. Replace each summary with the paper's own abstract once it is written, and pick one title for the wage-price paper.
+4. **Work in progress.** The wage-price entry uses the manuscript title and a summary written from the conference abstract. Swap in the paper's own abstract once the macros resolve. The housing paper is deliberately not listed yet; add it when the manuscript is ready.
 5. **Last updated.** The footer date on every page.
 
 ## Previewing locally
