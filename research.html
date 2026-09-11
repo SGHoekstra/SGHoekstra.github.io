@@ -71,7 +71,7 @@
       <p class="meta">Draft</p>
       <details class="abstract" open>
         <summary>Abstract</summary>
-        <p>Large macroeconomic agent-based models fix their behavioural coefficients by calibration, which places them beyond empirical scrutiny. I recalibrate the CANVAS model for the Netherlands and estimate its demand-pull, cost-push, expectation and wage-indexation pass-through parameters by neural posterior estimation. The estimates imply substantially incomplete pass-through, with firms absorbing a third to a half of cost and demand shocks into margins, so that a ten per cent wage shock produces no wage–price spiral. I also initialise the firm population one to one from Dutch administrative balance-sheet records, and ask whether that richer heterogeneity moves the estimated parameters, the no-spiral conclusion, or forecast accuracy.</p>
+        <p>Large macroeconomic agent-based models contain behavioural coefficients that are commonly fixed by calibration and therefore remain hidden from direct empirical scrutiny. We organise the analysis of CANVAS, recalibrated for the Netherlands, around estimation, forecasting and parameter constancy. First, neural posterior estimation turns these calibrated constants into an estimable behavioural vector for each of 15 pricing, wage and expectation specifications. The fitted locations provide plug-in vectors for forecasting, but not calibrated intervals or a ladder-wide point-identification result: simulation-based calibration rejects 49 of 222 parameter–cell pairs, and the supply-side pass-through parameter is uninformative by construction. Second, we assess whether replacing unit pass-through and unit wage indexation matters for forecasts. In the current tables, the unestimated corner has GDP-deflator RMSE ratios of 2.28 in the tranquil holdout and 1.34 during the 2020–2024 episode relative to a level AR(1); 14 of 15 estimated extensions improve on it in the first window and 15 of 15 in the second. 4 extensions beat the AR(1) in both windows before the usability screen, including the two headline CANVAS arms at 0.68 and 0.75 in the holdout and 0.80 and 0.81 during the episode. These comparisons remain provisional until the exogenous-input smoother is rerun using only information available at each origin. A posterior-versus-prior predictive comparison is also pending, so improvement over the unit corner is not yet attributable entirely to the observed data. The final stage specifies a calm-versus-bout parameter-constancy test, using disjoint calm fits as a placebo distribution for estimator and sample variation.</p>
       </details>
     </article>
     <article class="paper" id="housing">
@@ -79,8 +79,9 @@
       <p class="authors">Steven Hoekstra</p>
       <p class="meta">Draft</p>
       <details class="abstract" open>
-        <summary>Abstract</summary>
-        <!-- TODO: the manuscript abstract is still marked TBD. Replace this summary with it once written. -->
+        <summary>Summary</summary>
+        <!-- The manuscript abstract is still "TBD", so this is a summary drawn from the paper's
+             introduction, deliberately not labelled as the abstract. Swap it in when written. -->
         <p>What are the long-run macroeconomic costs of the Dutch housing crisis, and do recent policies ease or deepen them? I build PolderABM, a stock-flow consistent agent-based model that runs the Netherlands at 1:100 scale, with roughly 79,000 simulated households across some 3,700 neighbourhood clusters, a spatially explicit labour market with commuting costs, a three-tier mortgage approval system, endogenous construction and a pension fund. Housing frictions reach the wider economy through spatial labour misallocation, tenure distortion and pension-driven yield-curve feedback. Counterfactual experiments cover the Affordable Rent Act, zoning liberalisation and abolition of the mortgage interest deduction.</p>
       </details>
     </article>
