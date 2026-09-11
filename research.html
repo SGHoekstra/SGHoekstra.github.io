@@ -35,33 +35,41 @@
     <h1>Papers &amp; software</h1>
     <p class="lede" style="margin-top:1rem">My research views macroeconomics through the lens of complex systems. I have worked with both heterogeneous-agent equilibrium models and large-scale agent-based models, and my aim is to use the insights of both to better understand macroeconomic phenomena, using theory, large-scale computational modelling and empirical methods.</p>
 
-    <h2 id="jmp">Job market paper</h2>
-    <article class="paper">
+    <h2 id="working-papers">Working papers</h2>
+    <article class="paper" id="ocm">
       <!-- TODO: confirm the exact name of the SCE contest and the outcome -->
       <span class="award">Finalist, Society for Computational Economics student paper contest, CEF 2025</span>
       <h3>A Dutch Agent-Based Model with Optimal Consumption</h3>
-      <!-- TODO: add co-authors if any -->
       <p class="authors">Steven Hoekstra</p>
-      <p class="meta"><em>Job market paper</em> · Working paper · Earlier version circulated as <em>Forecasting with a Dutch Agent-Based Model and Optimally Behaving Households</em></p>
-      <ul class="links">
-        <!-- TODO: add files under papers/ -->
-        <li><a href="papers/Hoekstra_JMP.pdf">Paper (PDF)</a></li>
-        <li><a href="papers/Hoekstra_JMP_slides.pdf">Slides</a></li>
-        <li><a href="https://github.com/SGHoekstra">Code</a></li>
-      </ul>
+      <p class="meta">Working paper · Earlier version circulated as <em>Forecasting with a Dutch Agent-Based Model and Optimally Behaving Households</em></p>
       <details class="abstract" open>
         <summary>Abstract</summary>
         <p>We develop an extension of the stock-flow consistent agent-based model of Poledna et al. (2023) by introducing the household optimisation problem of Kaplan et al. (2018), which allows for heterogeneous marginal propensities to consume. We use a neural network approach to recalculate the solution of the optimisation problem each period for all Monte Carlo simulations, totalling more than 100,000 re-optimisations. Household agents make optimal choices given their perceived laws of motion, which we model with an AR(1) rule, and update their optimal choices each period as new information arrives. We analyse the model by means of a forecasting exercise in which we compare it to the base version of the agent-based model, a version of the agent-based model with a more complex consumption heuristic, and a benchmark VAR model. We calibrate the model for the Dutch economy and forecast the Dutch economy. The optimal consumption model has better forecast performance than the benchmark VAR, the base agent-based model and the extended-heuristic agent-based model.</p>
       </details>
+      <!-- TODO: add the PDF under papers/ and link it here once the paper is final -->
     </article>
 
-    <h2>Work in progress</h2>
-    <article class="paper">
+    <h2 id="work-in-progress">Work in progress</h2>
+    <article class="paper" id="wage-price">
       <h3>Estimation, Forecasting and Parameter Constancy in a Dutch Agent-Based Model</h3>
       <p class="authors">Steven Hoekstra</p>
       <p class="meta">Draft</p>
-      <p class="small" style="margin:0">Large macroeconomic agent-based models fix their behavioural coefficients by calibration, which places them beyond empirical scrutiny. I recalibrate the CANVAS model for the Netherlands and estimate its demand-pull, cost-push, expectation and wage-indexation pass-through parameters by neural posterior estimation. The estimates imply substantially incomplete pass-through, with firms absorbing a third to a half of cost and demand shocks into margins, so that a ten per cent wage shock produces no wage–price spiral. I also initialise the firm population one to one from Dutch administrative balance-sheet records, and ask whether that richer heterogeneity moves the estimated parameters, the no-spiral conclusion, or forecast accuracy.</p>
+      <details class="abstract" open>
+        <summary>Abstract</summary>
+        <p>Large macroeconomic agent-based models fix their behavioural coefficients by calibration, which places them beyond empirical scrutiny. I recalibrate the CANVAS model for the Netherlands and estimate its demand-pull, cost-push, expectation and wage-indexation pass-through parameters by neural posterior estimation. The estimates imply substantially incomplete pass-through, with firms absorbing a third to a half of cost and demand shocks into margins, so that a ten per cent wage shock produces no wage–price spiral. I also initialise the firm population one to one from Dutch administrative balance-sheet records, and ask whether that richer heterogeneity moves the estimated parameters, the no-spiral conclusion, or forecast accuracy.</p>
+      </details>
     </article>
+    <article class="paper" id="housing">
+      <h3>An Agent-Based Model of the Housing Market</h3>
+      <p class="authors">Steven Hoekstra</p>
+      <p class="meta">Draft</p>
+      <details class="abstract" open>
+        <summary>Abstract</summary>
+        <!-- TODO: the manuscript abstract is still marked TBD. Replace this summary with it once written. -->
+        <p>What are the long-run macroeconomic costs of the Dutch housing crisis, and do recent policies ease or deepen them? I build PolderABM, a stock-flow consistent agent-based model that runs the Netherlands at 1:100 scale, with roughly 79,000 simulated households across some 3,700 neighbourhood clusters, a spatially explicit labour market with commuting costs, a three-tier mortgage approval system, endogenous construction and a pension fund. Housing frictions reach the wider economy through spatial labour misallocation, tenure distortion and pension-driven yield-curve feedback. Counterfactual experiments cover the Affordable Rent Act, zoning liberalisation and abolition of the mortgage interest deduction.</p>
+      </details>
+    </article>
+
     <h2>Software</h2>
     <ul class="clean">
       <li>

@@ -8,23 +8,22 @@ Plain HTML and CSS, no build step. Edit a file, commit, push; GitHub Pages deplo
 
 | Path | What it is |
 | --- | --- |
-| `index.html` | Home: bio, research interests, JMP summary, education, experience, references, contact |
-| `research.html` | Job market paper, work in progress, software, presentations, theses |
+| `index.html` | Home: bio, research interests, research list, education, experience, references, contact |
+| `research.html` | Working papers, work in progress, software, presentations, theses |
 | `teaching.html` | Teaching experience |
 | `assets/css/style.css` | The only stylesheet |
 | `assets/img/` | Portrait and favicon |
 | `cv/` | `Steven_Hoekstra_CV.pdf`, linked from the navigation |
-| `papers/` | Put `Hoekstra_JMP.pdf` and `Hoekstra_JMP_slides.pdf` here |
+| `papers/` | Paper PDFs, once there are any to post |
 
-## Before going live
-
-Search the HTML for `TODO`. Each one marks something to fill in or confirm:
+## To do
 
 1. **Photo.** Replace `assets/img/portrait.svg` with a real photo and update the `<img>` in `index.html` (ideally 4:5 aspect ratio, around 500×625 px).
-2. **Paper PDFs.** Add `papers/Hoekstra_JMP.pdf` and `papers/Hoekstra_JMP_slides.pdf`, or change the links.
-3. **Job market paper.** Confirm the co-author line and the wording of the SCE contest award in `research.html`.
-4. **Work in progress.** The wage-price entry uses the manuscript title and a summary written from the conference abstract. Swap in the paper's own abstract once the macros resolve. The housing paper is deliberately not listed yet; add it when the manuscript is ready.
-5. **Last updated.** The footer date on every page.
+2. **Paper 1 PDF.** When *A Dutch Agent-Based Model with Optimal Consumption* is final, put the PDF in `papers/` and link it from its entry in `research.html`.
+3. **Award wording.** Confirm the Society for Computational Economics contest name and outcome on the badge in `research.html`, or remove the badge.
+4. **Housing abstract.** That manuscript's abstract is still `TBD`; the site currently shows a summary written from its introduction. Swap in the real abstract when it exists.
+5. **Presentations.** Verify the two entries, and decide whether to add the WEHIA 2026 and Ortec talks.
+6. **Last updated.** The footer date on every page.
 
 ## Previewing locally
 
