@@ -14,12 +14,12 @@ Plain HTML and CSS, no build step. Edit a file, commit, push; GitHub Pages deplo
 | `assets/css/style.css` | The only stylesheet |
 | `assets/img/` | Portrait and favicon |
 | `cv/` | `Steven_Hoekstra_CV.pdf`, linked from the navigation |
-| `papers/` | Paper PDFs, once there are any to post |
+| `papers/` | Paper PDFs served by the site |
 
 ## To do
 
 1. **Photo.** Replace `assets/img/portrait.svg` with a real photo and update the `<img>` in `index.html` (ideally 4:5 aspect ratio, around 500×625 px).
-2. **Paper 1 PDF.** When *A Dutch Agent-Based Model with Optimal Consumption* is final, put the PDF in `papers/` and link it from its entry in `research.html`.
+2. **CV.** The CV still lists the working paper under its old title, *A Dutch Agent Based Model with Optimal Consumption*, and omits the co-authors. The paper is now *Forecasting with a Dutch Agent-Based Model and Optimally Behaving Households*, with Cars Hommes and Frank Pijpers.
 3. **Award wording.** Confirm the Society for Computational Economics contest name and outcome on the badge in `research.html`, or remove the badge.
 4. **Housing abstract.** That manuscript's abstract is still `TBD`; the site currently shows a summary written from its introduction. Swap in the real abstract when it exists.
 5. **Presentations.** Verify the two entries, and decide whether to add the WEHIA 2026 and Ortec talks.

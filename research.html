@@ -37,16 +37,18 @@
 
     <h2 id="working-papers">Working papers</h2>
     <article class="paper" id="ocm">
-      <!-- TODO: confirm the exact name of the SCE contest and the outcome -->
+      <!-- TODO: confirm the exact contest name and whether the result was finalist or winner -->
       <span class="award">Finalist, Society for Computational Economics student paper contest, CEF 2025</span>
-      <h3>A Dutch Agent-Based Model with Optimal Consumption</h3>
-      <p class="authors">Steven Hoekstra</p>
-      <p class="meta">Working paper · Earlier version circulated as <em>Forecasting with a Dutch Agent-Based Model and Optimally Behaving Households</em></p>
+      <h3>Forecasting with a Dutch Agent-Based Model and Optimally Behaving Households</h3>
+      <p class="authors">Steven Hoekstra, Cars Hommes and Frank Pijpers</p>
+      <p class="meta">Working paper</p>
+      <ul class="links">
+        <li><a href="papers/forecasting-dutch-abm.pdf">Paper (PDF)</a></li>
+      </ul>
       <details class="abstract" open>
         <summary>Abstract</summary>
-        <p>We develop an extension of the stock-flow consistent agent-based model of Poledna et al. (2023) by introducing the household optimisation problem of Kaplan et al. (2018), which allows for heterogeneous marginal propensities to consume. We use a neural network approach to recalculate the solution of the optimisation problem each period for all Monte Carlo simulations, totalling more than 100,000 re-optimisations. Household agents make optimal choices given their perceived laws of motion, which we model with an AR(1) rule, and update their optimal choices each period as new information arrives. We analyse the model by means of a forecasting exercise in which we compare it to the base version of the agent-based model, a version of the agent-based model with a more complex consumption heuristic, and a benchmark VAR model. We calibrate the model for the Dutch economy and forecast the Dutch economy. The optimal consumption model has better forecast performance than the benchmark VAR, the base agent-based model and the extended-heuristic agent-based model.</p>
+        <p>We develop an agent-based model of the Dutch economy that embeds a HANK-style household sector with heterogeneous marginal propensities to consume. Building on the stock-flow consistent framework of Poledna et al. (2023), we replace the constant marginal propensity to consume heuristic with forward-looking households who optimise consumption, savings and investments over time as in Kaplan et al. (2018). Policy functions are computed using an amortised neural-network method that enables efficient recalculation across time periods and Monte Carlo simulations without re-solving the household problem. Following Adam and Marcet (2011), households are internally rational, optimising given beliefs, but form expectations using adaptive AR(1) learning rules rather than model-consistent forecasts. We calibrate the model to Eurostat national accounts and administrative microdata from Statistics Netherlands, targeting empirically realistic MPC heterogeneity driven by the joint distribution of income, illiquid wealth, and liquid wealth. In rolling out-of-sample forecasting exercises over 2010–2019, we compare the optimal-consumption ABM against the original model, ten heuristic variants spanning static rules, habit formation, buffer-stock target wealth, capital-return MPC asymmetry, and Merton portfolio choice, and benchmark time-series models. The optimal-consumption ABM achieves household consumption forecast improvements of 10–22% at the 12-quarter horizon relative to univariate benchmarks depending on the expectation mechanism (Diebold–Mariano p &lt; 0.01), and up to 28% relative to the VAR(1) under AR expectations. A channel decomposition isolating the portfolio-choice and capital-return channels reveals that portfolio choice accounts for the majority of the OC-ABM's residual advantage over a buffer-stock heuristic (+11.7 pp on consumption RMSFE), while capital-return MPC asymmetry contributes negligibly; the OC-ABM remains the only variant whose consumption gain is statistically significant under every expectation mechanism, consistent with Euler-equation discipline operating through reduced forecast variance rather than higher central tendency. GDP improvements of 11–15% are directionally positive across all mechanisms but not statistically significant. These results demonstrate the value of combining microfounded household behaviour with the flexibility of agent-based modelling for macroeconomic forecasting.</p>
       </details>
-      <!-- TODO: add the PDF under papers/ and link it here once the paper is final -->
     </article>
 
     <h2 id="work-in-progress">Work in progress</h2>
