@@ -23,7 +23,7 @@ Search the HTML for `TODO`. Each one marks something to fill in or confirm:
 1. **Photo.** Replace `assets/img/portrait.svg` with a real photo and update the `<img>` in `index.html` (ideally 4:5 aspect ratio, around 500×625 px).
 2. **Paper PDFs.** Add `papers/Hoekstra_JMP.pdf` and `papers/Hoekstra_JMP_slides.pdf`, or change the links.
 3. **Job market paper.** Confirm the co-author line and the wording of the SCE contest award in `research.html`.
-4. **Work in progress.** Confirm the working title of the second paper.
+4. **Work in progress.** Both entries use descriptive working titles, not the real ones. Replace them with the titles from the manuscripts, and confirm the author lines.
 5. **Last updated.** The footer date on every page.
 
 ## Previewing locally
