@@ -35,7 +35,7 @@
     <h1>Papers &amp; software</h1>
     <p class="lede">My research examines how heterogeneous households and firms shape policy transmission, and when estimated models support reliable intervention predictions. I combine agent-based and heterogeneous-agent equilibrium models with register microdata, neural-network solution methods and simulation-based inference.</p>
 
-    <h2 id="working-papers">Working papers</h2>
+    <h2 id="working-papers">Working papers and research software</h2>
     <article class="paper" id="ocm">
       <span class="award">Runner-up, Society for Computational Economics Graduate Student Paper Award, CEF 2026</span>
       <h3>Forecasting with a Dutch Agent-Based Model and Optimally Behaving Households</h3>
@@ -53,14 +53,16 @@
 
     <article class="paper" id="beforeit">
       <h3>BeforeIT.jl: High-Performance Agent-Based Macroeconomics Made Easy</h3>
-      <p class="authors">Adriano Meligrana, Mitja Devetak, Steven Hoekstra, Sebastian Poledna, Oliver Reiter and Aldo Glielmo</p>
-      <p class="meta">Preprint</p>
+      <p class="authors">Software collaborators include Adriano Meligrana, Mitja Devetak, Steven Hoekstra, Sebastian Poledna, Oliver Reiter and Aldo Glielmo</p>
+      <p class="meta">Research software</p>
       <ul class="links">
         <li><a href="https://github.com/bancaditalia/BeforeIT.jl">Package</a></li>
+        <li><a href="https://arxiv.org/abs/2502.13267">Original preprint (2025)</a></li>
       </ul>
+      <p class="small muted">The original software description is by Aldo Glielmo, Mitja Devetak, Adriano Meligrana and Sebastian Poledna.</p>
       <details class="abstract" open>
-        <summary>Abstract</summary>
-        <p>BeforeIT is an open-source software for building and simulating state-of-the-art macroeconomic agent-based models (macro ABMs) based on the recently introduced macro ABM developed in [1] and here referred to as the base model. Written in Julia, it combines extraordinary computational efficiency with user-friendliness and extensibility. We present the main structure of the software, demonstrate its ease of use with illustrative examples, and benchmark its performance. Our benchmarks demonstrate that the base model built with BeforeIT is orders of magnitude faster than its original Matlab implementation, while achieving performance comparable to a highly optimized HPC implementation. BeforeIT is designed to facilitate reproducibility, extensibility, and experimentation. As the first open-source, industry-grade software to build macro ABMs, BeforeIT can significantly foster collaboration and innovation in the field of agent-based macroeconomic modelling. The package, along with its documentation, is freely available at <a href="https://github.com/bancaditalia/BeforeIT.jl">https://github.com/bancaditalia/BeforeIT.jl</a> under the AGPL-3.0.</p>
+        <summary>Summary</summary>
+        <p>BeforeIT.jl is an open-source Julia framework for macroeconomic agent-based modelling, implementing the model of Poledna et al. (2023). Its modular structure supports economic forecasting, counterfactual simulations and model extensions. The software description presents the framework, worked examples and performance benchmarks. I developed its validation suite and contributed model extensions and forecast-evaluation tools.</p>
       </details>
     </article>
 
@@ -91,7 +93,7 @@
     <h2>Software</h2>
     <ul class="clean">
       <li>
-        <strong><a href="https://github.com/bancaditalia/BeforeIT.jl">BeforeIT.jl</a></strong> <span class="muted">— co-author, see <a href="#beforeit">the paper</a></span><br>
+        <strong><a href="https://github.com/bancaditalia/BeforeIT.jl">BeforeIT.jl</a></strong> <span class="muted">— software co-author, see <a href="#beforeit">the project</a></span><br>
         <span class="small">The Bank of Italy's high-performance Julia framework for macroeconomic agent-based modelling, implementing the model of Poledna et al. (2023). I developed its validation suite and contributed the CANVAS model implementation, an AR(1) growth-rate model variant, a multi-country forecast evaluation pipeline, and HP-filter and correlation diagnostics.</span>
       </li>
       <li>
