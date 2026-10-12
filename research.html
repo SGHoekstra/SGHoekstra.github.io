@@ -33,21 +33,21 @@
 
     <p class="eyebrow">Research</p>
     <h1>Papers &amp; software</h1>
-    <p class="lede">My research views macroeconomics through the lens of complex systems. I have worked with both heterogeneous-agent equilibrium models and large-scale agent-based models, and my aim is to use the insights of both to better understand macroeconomic phenomena, using theory, large-scale computational modelling and empirical methods.</p>
+    <p class="lede">My research examines how heterogeneous households and firms shape policy transmission, and when estimated models support reliable intervention predictions. I combine agent-based and heterogeneous-agent equilibrium models with register microdata, neural-network solution methods and simulation-based inference.</p>
 
     <h2 id="working-papers">Working papers</h2>
     <article class="paper" id="ocm">
-      <!-- TODO: confirm whether the result was finalist or winner, and the exact contest name -->
-      <span class="award">Finalist, Society for Computational Economics student paper contest, CEF 2026</span>
+      <span class="award">Runner-up, Society for Computational Economics Graduate Student Paper Award, CEF 2026</span>
       <h3>Forecasting with a Dutch Agent-Based Model and Optimally Behaving Households</h3>
       <p class="authors">Steven Hoekstra, Cars Hommes and Frank Pijpers</p>
       <p class="meta">Working paper</p>
       <ul class="links">
         <li><a href="papers/forecasting-dutch-abm.pdf">Paper (PDF)</a></li>
+        <li><a href="https://comp-econ.com/cef-2026-student-paper/">Award announcement</a></li>
       </ul>
       <details class="abstract" open>
-        <summary>Abstract</summary>
-        <p>We develop an agent-based model of the Dutch economy that embeds a HANK-style household sector with heterogeneous marginal propensities to consume. Building on the stock-flow consistent framework of Poledna et al. (2023), we replace the constant marginal propensity to consume heuristic with forward-looking households who optimise consumption, savings and investments over time as in Kaplan et al. (2018). Policy functions are computed using an amortised neural-network method that enables efficient recalculation across time periods and Monte Carlo simulations without re-solving the household problem. Following Adam and Marcet (2011), households are internally rational, optimising given beliefs, but form expectations using adaptive AR(1) learning rules rather than model-consistent forecasts. We calibrate the model to Eurostat national accounts and administrative microdata from Statistics Netherlands, targeting empirically realistic MPC heterogeneity driven by the joint distribution of income, illiquid wealth, and liquid wealth. In rolling out-of-sample forecasting exercises over 2010–2019, we compare the optimal-consumption ABM against the original model, ten heuristic variants spanning static rules, habit formation, buffer-stock target wealth, capital-return MPC asymmetry, and Merton portfolio choice, and benchmark time-series models. The optimal-consumption ABM achieves household consumption forecast improvements of 10–22% at the 12-quarter horizon relative to univariate benchmarks depending on the expectation mechanism (Diebold–Mariano p &lt; 0.01), and up to 28% relative to the VAR(1) under AR expectations. A channel decomposition isolating the portfolio-choice and capital-return channels reveals that portfolio choice accounts for the majority of the OC-ABM's residual advantage over a buffer-stock heuristic (+11.7 pp on consumption RMSFE), while capital-return MPC asymmetry contributes negligibly; the OC-ABM remains the only variant whose consumption gain is statistically significant under every expectation mechanism, consistent with Euler-equation discipline operating through reduced forecast variance rather than higher central tendency. GDP improvements of 11–15% are directionally positive across all mechanisms but not statistically significant. These results demonstrate the value of combining microfounded household behaviour with the flexibility of agent-based modelling for macroeconomic forecasting.</p>
+        <summary>Summary</summary>
+        <p>We embed a two-asset HANK household problem in a stock-flow-consistent agent-based model of the Dutch economy. Households optimise consumption and portfolio decisions under subjective market beliefs, drawing on Adam and Marcet's approach. An amortised neural-network solver makes these decisions computationally feasible across simulations. Calibration uses national accounts and administrative microdata from Statistics Netherlands, retaining heterogeneity in income, liquid wealth and illiquid wealth. Rolling out-of-sample forecasts compare the model with heuristic household rules and time-series benchmarks under four expectation specifications. At the twelve-quarter horizon, root mean squared forecast errors of aggregate household consumption are 9.9–21.8% lower than matched univariate benchmarks. Comparisons identify portfolio adjustment as an important mechanism; simpler behavioural rules remain competitive, and gains concentrate at longer horizons. The paper examines when optimising households improve macroeconomic forecasts and which decision mechanisms account for those gains.</p>
       </details>
     </article>
 
@@ -66,31 +66,33 @@
 
     <h2 id="work-in-progress">Work in progress</h2>
     <article class="paper" id="wage-price">
-      <h3>Estimation, Forecasting and Parameter Constancy in a Dutch Agent-Based Model</h3>
+      <h3>When Do Estimated Macroeconomic Models Misread Wage–Price Transmission?</h3>
       <p class="authors">Steven Hoekstra</p>
-      <p class="meta">Draft</p>
+      <p class="meta">Work in progress</p>
       <details class="abstract" open>
-        <summary>Abstract</summary>
-        <p>Large macroeconomic agent-based models contain behavioural coefficients that are commonly fixed by calibration and therefore remain hidden from direct empirical scrutiny. We organise the analysis of CANVAS, recalibrated for the Netherlands, around estimation, forecasting and parameter constancy. First, neural posterior estimation turns these calibrated constants into an estimable behavioural vector for each of 15 pricing, wage and expectation specifications. The fitted locations provide plug-in vectors for forecasting, but not calibrated intervals or a ladder-wide point-identification result: simulation-based calibration rejects 49 of 222 parameter–cell pairs, and the supply-side pass-through parameter is uninformative by construction. Second, we assess whether replacing unit pass-through and unit wage indexation matters for forecasts. In the current tables, the unestimated corner has GDP-deflator RMSE ratios of 2.28 in the tranquil holdout and 1.34 during the 2020–2024 episode relative to a level AR(1); 14 of 15 estimated extensions improve on it in the first window and 15 of 15 in the second. 4 extensions beat the AR(1) in both windows before the usability screen, including the two headline CANVAS arms at 0.68 and 0.75 in the holdout and 0.80 and 0.81 during the episode. These comparisons remain provisional until the exogenous-input smoother is rerun using only information available at each origin. A posterior-versus-prior predictive comparison is also pending, so improvement over the unit corner is not yet attributable entirely to the observed data. The final stage specifies a calm-versus-bout parameter-constancy test, using disjoint calm fits as a placebo distribution for estimator and sample variation.</p>
+        <summary>Summary</summary>
+        <p>Can an estimated macroeconomic model fit historical data while misreading wage–price transmission? This project uses neural simulation-based inference in a Dutch ABM to examine misspecification and identification. Known-truth experiments compare wage-setting and labour-market mechanisms, testing whether historical fit conceals distorted parameters or intervention responses and whether posterior predictive checks detect these failures. The empirical application compares alternative specifications during the Dutch 2022 inflation episode, assessing rejection by the data and sensitivity of the conclusions. It builds on earlier estimation work at De Nederlandsche Bank; the redesigned analysis is ongoing.</p>
       </details>
     </article>
     <article class="paper" id="housing">
-      <h3>An Agent-Based Model of the Housing Market</h3>
+      <h3>Shortage or Misallocation? The Welfare Loss from Dutch Housing Policy, 2015–2035</h3>
       <p class="authors">Steven Hoekstra</p>
-      <p class="meta">Draft</p>
+      <p class="meta">Work in progress</p>
       <details class="abstract" open>
         <summary>Summary</summary>
-        <!-- The manuscript abstract is still "TBD", so this is a summary drawn from the paper's
-             introduction, deliberately not labelled as the abstract. Swap it in when written. -->
-        <p>What are the long-run macroeconomic costs of the Dutch housing crisis, and do recent policies ease or deepen them? I build PolderABM, a stock-flow consistent agent-based model that runs the Netherlands at 1:100 scale, with roughly 79,000 simulated households across some 3,700 neighbourhood clusters, a spatially explicit labour market with commuting costs, a three-tier mortgage approval system, endogenous construction and a pension fund. Housing frictions reach the wider economy through spatial labour misallocation, tenure distortion and pension-driven yield-curve feedback. Counterfactual experiments cover the Affordable Rent Act, zoning liberalisation and abolition of the mortgage interest deduction.</p>
+        <p>How much of the welfare loss from the Dutch housing crisis reflects too few homes, and how much reflects households being poorly matched to the existing stock? I am extending the Poledna macroeconomic ABM, implemented in BeforeIT.jl, with spatial housing markets, job search and job-to-job mobility in the tradition of Postel-Vinay and Robin, demography, firm entry and exit, and endogenous growth. Housing mechanisms include rent and mortgage lock-in, underwriting constraints and construction delays. The project is designed to separate shortage from misallocation over 2015–2035 and compare policies that expand or reallocate the housing stock, including mortgage interest deduction, rent regulation and planning restrictions. Model integration, calibration and welfare comparisons are ongoing.</p>
       </details>
     </article>
+
+    <h2>Research programme</h2>
+    <p>My future research connects microeconomic information, behavioural mechanisms and evidence for policy evaluation. I will compare register-based model populations with synthetic populations and networks to identify which joint balance-sheet exposures and worker–firm relationships matter for monetary and fiscal transmission, accounting for measurement and linkage errors. The longer-term aim is one agent per real household, linked to housing transactions through ODISSEI and comparable infrastructures abroad.</p>
+    <p>I will develop estimation methods that combine aggregate time series with independent empirical estimates of household and firm responses, and assess policy choices across specifications consistent with that evidence. In parallel, I will study the interaction between subjective expectations and limited attention, conditioning amortised neural-network solvers on expectation and sparsity parameters. Comparisons in HANK and ABM settings will examine how these mechanisms interact with market adjustment, with later extensions to firms' production and investment decisions.</p>
 
     <h2>Software</h2>
     <ul class="clean">
       <li>
         <strong><a href="https://github.com/bancaditalia/BeforeIT.jl">BeforeIT.jl</a></strong> <span class="muted">— co-author, see <a href="#beforeit">the paper</a></span><br>
-        <span class="small">The Bank of Italy's high-performance Julia framework for macroeconomic agent-based modelling, implementing the model of Poledna et al. (2023). I contributed the CANVAS model implementation, an AR(1) growth-rate model variant, a multi-country forecast evaluation pipeline, and HP-filter and correlation diagnostics.</span>
+        <span class="small">The Bank of Italy's high-performance Julia framework for macroeconomic agent-based modelling, implementing the model of Poledna et al. (2023). I developed its validation suite and contributed the CANVAS model implementation, an AR(1) growth-rate model variant, a multi-country forecast evaluation pipeline, and HP-filter and correlation diagnostics.</span>
       </li>
       <li>
         <strong><a href="https://github.com/SGHoekstra/CalibrateBeforeIT.jl">CalibrateBeforeIT.jl</a></strong><br>
@@ -123,7 +125,7 @@
 <footer class="site-footer">
   <div class="wrap">
     <span>© 2026 Steven Hoekstra</span>
-    <span>Last updated September 2026 · <a href="https://github.com/SGHoekstra/SGHoekstra.github.io">Source</a></span>
+    <span>Last updated October 2026 · <a href="https://github.com/SGHoekstra/SGHoekstra.github.io">Source</a></span>
   </div>
 </footer>
 

@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Steven Hoekstra — Economist, University of Amsterdam</title>
-  <meta name="description" content="Steven Hoekstra is a PhD candidate in economics at the University of Amsterdam, working on agent-based and heterogeneous-agent macroeconomic models.">
+  <meta name="description" content="Steven Hoekstra is a PhD candidate in economics at the University of Amsterdam, studying policy transmission with heterogeneous-agent models, microdata and simulation-based inference.">
   <link rel="canonical" href="https://sghoekstra.github.io/">
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Steven Hoekstra — Economist">
-  <meta property="og:description" content="PhD candidate in economics, University of Amsterdam & Tinbergen Institute. Macroeconomics through the lens of complex systems.">
+  <meta property="og:description" content="PhD candidate in economics, University of Amsterdam & Tinbergen Institute. Policy transmission, heterogeneous agents and simulation-based inference.">
   <meta property="og:url" content="https://sghoekstra.github.io/">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +41,7 @@
       <div>
         <h1>Steven Hoekstra</h1>
         <p class="title">PhD Candidate in Economics<br>University of Amsterdam &amp; Tinbergen Institute</p>
-        <p class="lede">I study macroeconomics through the lens of complex systems. I work with both heterogeneous-agent equilibrium models and large-scale agent-based models, and combine theory, high-performance computation and empirical methods to understand macroeconomic dynamics. My current work builds agent-based models of the Dutch economy: one in which households consume optimally, one that estimates the strength of the channels behind inflation, and one that puts an institutionally detailed housing market inside a macroeconomic model.</p>
+        <p class="lede">I study how differences in households' and firms' balance sheets, employment risks and expectations shape policy transmission, and when estimated macroeconomic models capture these effects reliably. I combine heterogeneous-agent equilibrium models and agent-based models with microdata, neural-network solvers and simulation-based inference. My three dissertation projects examine optimal household decisions under subjective expectations, the reliability of estimated wage–price transmission, and the welfare costs of housing shortage and misallocation.</p>
         <ul class="contact">
           <li><a href="mailto:s.g.hoekstra@uva.nl">s.g.hoekstra@uva.nl</a></li>
           <li><a href="https://github.com/SGHoekstra">GitHub</a></li>
@@ -61,6 +61,8 @@
       <li>Bounded rationality</li>
       <li>Networks</li>
       <li>Forecasting</li>
+      <li>Simulation-based inference</li>
+      <li>Microdata</li>
       <li>High-performance computing</li>
     </ul>
 
@@ -68,19 +70,19 @@
     <ul class="clean">
       <li>
         <strong><a href="research.html#ocm">Forecasting with a Dutch Agent-Based Model and Optimally Behaving Households</a></strong> <span class="muted">— with Cars Hommes and Frank Pijpers, working paper</span><br>
-        <span class="small">An agent-based model of the Dutch economy in which forward-looking households solve a two-asset consumption–savings problem, which forecasts household consumption better than heuristic versions of the model and time-series benchmarks.</span>
+        <span class="small">Two-asset HANK households optimise under subjective expectations inside an ABM. Twelve-quarter aggregate consumption forecast errors are 9.9–21.8% lower than matched univariate benchmarks; portfolio adjustment is an important mechanism. Runner-up, CEF 2026 Graduate Student Paper Award.</span>
       </li>
       <li>
         <strong><a href="research.html#beforeit">BeforeIT.jl: High-Performance Agent-Based Macroeconomics Made Easy</a></strong> <span class="muted">— with Meligrana, Devetak, Poledna, Reiter and Glielmo, preprint</span><br>
-        <span class="small">The Bank of Italy's open-source Julia framework for building and simulating macroeconomic agent-based models, and the first industry-grade package of its kind.</span>
+        <span class="small">The Bank of Italy's open-source Julia framework for macroeconomic agent-based modelling. I developed its validation suite and contributed model extensions and forecast-evaluation tools.</span>
       </li>
       <li>
-        <strong><a href="research.html#wage-price">Estimation, Forecasting and Parameter Constancy in a Dutch Agent-Based Model</a></strong> <span class="muted">— draft</span><br>
-        <span class="small">Estimating the pass-through parameters that agent-based models usually fix by calibration, and asking whether the 2022 inflation episode could have ignited a wage–price spiral.</span>
+        <strong><a href="research.html#wage-price">When Do Estimated Macroeconomic Models Misread Wage–Price Transmission?</a></strong> <span class="muted">— work in progress</span><br>
+        <span class="small">Known-truth experiments test whether good historical fit can conceal distorted intervention responses, followed by comparisons of alternative specifications for Dutch wage–price transmission.</span>
       </li>
       <li>
-        <strong><a href="research.html#housing">An Agent-Based Model of the Housing Market</a></strong> <span class="muted">— draft</span><br>
-        <span class="small">A spatially explicit model of the Dutch housing market, used to weigh rent regulation, zoning liberalisation and mortgage interest relief.</span>
+        <strong><a href="research.html#housing">Shortage or Misallocation? The Welfare Loss from Dutch Housing Policy, 2015–2035</a></strong> <span class="muted">— work in progress</span><br>
+        <span class="small">A spatial macroeconomic ABM with housing, labour-market mobility, demography and firm dynamics, designed to compare policies that expand or reallocate the housing stock. Calibration and welfare comparisons are ongoing.</span>
       </li>
     </ul>
 
@@ -88,7 +90,7 @@
     <dl class="rows">
       <div>
         <dt>2023 – present</dt>
-        <dd><strong>PhD in Economics</strong>, University of Amsterdam<br><span class="small muted">Supervisors: Cars Hommes and Frank Pijpers</span></dd>
+        <dd><strong>PhD in Economics</strong>, University of Amsterdam<br><span class="small muted">Supervisors: Cars Hommes and Frank Pijpers<br>Expected thesis submission: May 2027; defence: September 2027</span></dd>
       </div>
       <div>
         <dt>2021 – 2023</dt>
@@ -128,6 +130,12 @@
       </div>
     </dl>
 
+    <h2>Award &amp; computing allocations</h2>
+    <ul class="clean">
+      <li><strong>Runner-up, Society for Computational Economics Graduate Student Paper Award, CEF 2026</strong><br><span class="small">For <em>Forecasting with a Dutch Agent-Based Model and Optimally Behaving Households</em>. <a href="https://comp-econ.com/cef-2026-student-paper/">Award announcement</a></span></li>
+      <li><strong>Snellius supercomputer</strong><br><span class="small">Three awarded allocations of one million CPU hours each for computational research.</span></li>
+    </ul>
+
     <h2>References</h2>
     <ul class="refs">
       <li>
@@ -162,7 +170,7 @@
 <footer class="site-footer">
   <div class="wrap">
     <span>© 2026 Steven Hoekstra</span>
-    <span>Last updated September 2026 · <a href="https://github.com/SGHoekstra/SGHoekstra.github.io">Source</a></span>
+    <span>Last updated October 2026 · <a href="https://github.com/SGHoekstra/SGHoekstra.github.io">Source</a></span>
   </div>
 </footer>
 

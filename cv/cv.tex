@@ -34,14 +34,14 @@
 }
 \newcommand{\cvsection}[1]{%
   \par\needspace{5\baselineskip}%
-  \vspace{1.1em}\noindent{\large\bfseries #1}%
+  \vspace{0.9em}\noindent{\large\bfseries #1}%
   \par\vspace{0.25em}\noindent{\color{rule}\hrule height 0.6pt}%
   \par\vspace{0.6em}%
 }
-\newcommand{\entry}[2]{\par\vspace{0.55em}\noindent{\parfillskip=0pt\relax\textbf{#1}\hfill{\small #2}\par}}
-\newcommand{\titleonly}[1]{\par\vspace{0.55em}\noindent\textbf{#1}\par}
-\newcommand{\note}[1]{\par\noindent{\small #1}}
-\newcommand{\subhead}[1]{\par\vspace{0.75em}\noindent\textit{#1}\par\vspace{0.1em}}
+\newcommand{\entry}[2]{\par\vspace{0.4em}\noindent{\parfillskip=0pt\relax\textbf{#1}\hfill{\small #2}\par}}
+\newcommand{\titleonly}[1]{\par\vspace{0.4em}\noindent\textbf{#1}\par}
+\newcommand{\note}[1]{\par\noindent{\small\raggedright #1\par}}
+\newcommand{\subhead}[1]{\par\vspace{0.6em}\noindent\textit{#1}\par\vspace{0.1em}}
 
 \begin{document}
 
@@ -53,21 +53,22 @@ PhD Candidate in Economics, University of Amsterdam \& Tinbergen Institute\\
 \href{https://sghoekstra.github.io}{sghoekstra.github.io} \quad$\cdot$\quad
 \href{https://github.com/SGHoekstra}{github.com/SGHoekstra}
 }
+\par\vspace{0.35em}{\small Updated 12 October 2026}
 
 \cvsection{Profile}
-My research is focussed on macroeconomics viewed through the lens of complex systems. I have
-gained experience in both equilibrium and agent-based modelling through my academic pursuits.
-My objective is to use insights of both subfields to find a better understanding of
-macroeconomic phenomena using theory, large scale computational modelling, and empirical
-methods.
+I study how heterogeneous households and firms, boundedly rational expectations and market
+interactions shape monetary and fiscal policy transmission. I connect heterogeneous-agent
+equilibrium models and agent-based models, using neural-network solvers, simulation-based
+inference and microdata to assess economic mechanisms and the reliability of policy predictions.
 
 \cvsection{Interests}
-Complexity, macroeconomics, bounded rationality, agent-based modelling, networks, distributed
-computing, heterogeneous agent equilibrium models.
+Macroeconomics, heterogeneous-agent models, agent-based modelling, expectations and bounded
+rationality, policy evaluation, networks, simulation-based inference, high-performance computing.
 
 \cvsection{Education}
 \entry{PhD in Economics --- University of Amsterdam}{2023 --- current}
 \note{Supervisors: Prof.\ dr.\ C.H. Hommes and Prof.\ dr.\ F.P. Pijpers}
+\note{Expected thesis submission: May 2027; expected defence: September 2027}
 \entry{MPhil Economics and Econometrics --- Tinbergen Institute \textit{(cum laude)}}{2021 --- 2023}
 \note{Specialisation: Complexity, Mathematics, and Computation}
 \note{Thesis: An Agent Based Model of the Dutch Economy}
@@ -90,13 +91,17 @@ computing, heterogeneous agent equilibrium models.
 \cvsection{Working Papers}
 \titleonly{Forecasting with a Dutch Agent-Based Model and Optimally Behaving Households}
 \note{with Cars Hommes and Frank Pijpers}
-\note{Finalist, Society for Computational Economics student paper contest, CEF 2026}
+\note{Runner-up, Society for Computational Economics Graduate Student Paper Award, CEF 2026}
 \titleonly{BeforeIT.jl: High-Performance Agent-Based Macroeconomics Made Easy}
 \note{with Adriano Meligrana, Mitja Devetak, Sebastian Poledna, Oliver Reiter and Aldo Glielmo}
 
 \cvsection{Work in Progress}
-\titleonly{Estimation, Forecasting and Parameter Constancy in a Dutch Agent-Based Model}
-\titleonly{An Agent-Based Model of the Housing Market}
+\titleonly{When Do Estimated Macroeconomic Models Misread Wage--Price Transmission?}
+\note{Known-truth experiments on misspecification and intervention-response reliability;
+Dutch wage--price transmission and specification sensitivity during the 2022 inflation episode.}
+\titleonly{Shortage or Misallocation? The Welfare Loss from Dutch Housing Policy, 2015--2035}
+\note{Integrating housing, labour mobility, demography and firm dynamics in a macroeconomic
+ABM; calibration and welfare comparisons are ongoing.}
 
 \cvsection{Presentations}
 \begin{tabularx}{\linewidth}{@{}p{1.6cm}X@{}}
@@ -124,10 +129,20 @@ computing, heterogeneous agent equilibrium models.
 \note{$\cdot$ Conducted stakeholder interviews and set up a nationwide survey}
 \note{$\cdot$ Performed statistical analysis on the survey outcomes}
 
+\cvsection{Research Computing Allocations}
+\titleonly{Snellius supercomputer}
+\note{Three awarded allocations of one million CPU hours each (three million CPU hours in total).}
+
 \cvsection{Teaching}
 \subhead{Graduate}
 \entry{Behavioural Macro and Finance --- Lecturer}{2025}
+\note{Developed and taught the MSc lecture series with Cars Hommes, University of Amsterdam.}
+\titleonly{MPhil guest lectures --- Tinbergen Institute}
+\note{Annual guest lectures.}
+\newpage
 \subhead{Undergraduate}
+\titleonly{BSc Econometrics thesis supervision --- University of Amsterdam}
+\note{Ongoing.}
 \entry{Mathematics 3: Advanced Linear Algebra --- Tutor}{2025 --- 2026}
 \entry{Mathematics 2: Linear Algebra --- Tutor}{2024 --- 2025}
 \entry{Microeconomics for AE --- Tutor}{2023 --- 2024}
@@ -152,10 +167,11 @@ methods, Blanchard-Kahn conditions and sunspot solutions, the Kalman filter and 
 estimation}
 
 \cvsection{Skills}
-\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{5.1cm}X@{}}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{5.1cm}>{\raggedright\arraybackslash}X@{}}
 Programming & Matlab, Python, R, Julia, C, SQL, Bash\\[0.15em]
 High-performance computing & Parallel computing (MPI, BSPlib)\\[0.15em]
-Methods & Agent-based modelling, network methods, machine learning, econometrics,
+Methods & Agent-based modelling, heterogeneous-agent models, neural-network solvers,
+simulation-based inference, network methods, machine learning, econometrics,
 dynamic stochastic general equilibrium modelling\\[0.15em]
 Packages & Dynare, Stata\\
 \end{tabularx}

@@ -9,8 +9,8 @@ Plain HTML and CSS, no build step. Edit a file, commit, push; GitHub Pages deplo
 | Path | What it is |
 | --- | --- |
 | `index.html` | Home: bio, research interests, research list, education, experience, references, contact |
-| `research.html` | Working papers, work in progress, software, presentations, theses |
-| `teaching.html` | The Behavioural Macro and Finance course, plus undergraduate teaching |
+| `research.html` | Working papers, work in progress, research programme, software, presentations, theses |
+| `teaching.html` | MSc lecture series, Tinbergen guest lecturing, thesis supervision and undergraduate tutorials |
 | `assets/css/style.css` | The only stylesheet |
 | `assets/img/` | Portrait and favicon |
 | `cv/` | `cv.tex` and the `Steven_Hoekstra_CV.pdf` it builds, linked from the navigation |
@@ -19,13 +19,14 @@ Plain HTML and CSS, no build step. Edit a file, commit, push; GitHub Pages deplo
 ## To do
 
 1. **Photo.** Replace `assets/img/portrait.svg` with a real photo and update the `<img>` in `index.html` (ideally 4:5 aspect ratio, around 500×625 px).
-2. **Award wording.** Confirm the Society for Computational Economics contest name and whether the result was finalist or winner. The year is now CEF 2026.
-3. **Housing abstract.** That manuscript's abstract is still `TBD`, so the site shows a summary from its introduction, labelled Summary rather than Abstract. Swap in the real abstract when it exists.
-4. **Lecture slides.** In the course repo, `lecture_1_intro_abm` and `lecture_2_sfc_abm` were committed as nested-repository pointers, so they are empty on GitHub and the slides are not online. Push the PDFs, then link them under Lectures on the teaching page.
-5. **Presentations.** The Ortec talk and the wage-price short deck have placeholder dates in their sources and are not listed; add them with real venues and years.
-6. **Wage-price abstract.** The posted text is the manuscript abstract with its numeric macros resolved. One trailing `\tbd{...}` marker was dropped; re-check the wording after the final refit.
-7. **BeforeIT preprint.** Only the abstract is posted. Add the PDF to `papers/` and link it once the footer names the target journal.
-8. **Last updated.** The footer date on every page.
+2. **Work-in-progress summaries.** Housing and wage–price summaries reflect the redesigned projects as of October 2026. Update them when integration, calibration and the new experiments yield reportable results.
+3. **Lecture slides.** In the course repo, `lecture_1_intro_abm` and `lecture_2_sfc_abm` were committed as nested-repository pointers, so they are empty on GitHub and the slides are not online. Push the PDFs, then link them under Lectures on the teaching page.
+4. **Presentations.** The Ortec talk and the wage-price short deck have placeholder dates in their sources and are not listed; add them with real venues and years.
+5. **BeforeIT preprint.** Only the abstract is posted. Add the PDF to `papers/` and link it once the footer names the target journal.
+6. **Last updated.** Update the footer date on every page when changing public content.
+
+Award wording was verified against the [CEF 2026 Graduate Student Paper Award announcement](https://comp-econ.com/cef-2026-student-paper/): Steven Hoekstra was a runner-up.
+
 ## Rebuilding the CV
 
 The CV is written in LaTeX. After editing `cv/cv.tex`, rebuild the PDF the site serves:
