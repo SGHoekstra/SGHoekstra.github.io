@@ -26,6 +26,7 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
 \setlength{\emergencystretch}{1em}
+\raggedbottom
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot[L]{\sffamily\scriptsize\color{muted}Steven Hoekstra\enspace\textperiodcentered\enspace Curriculum Vitae}
@@ -36,31 +37,31 @@
 
 % Dates have a fixed column; titles wrap independently and align at the top.
 \newcommand{\cvsection}[1]{%
-  \par\Needspace{4\baselineskip}\vspace{0.8em}%
+  \par\Needspace{5\baselineskip}\vspace{0.8em}%
   {\sffamily\bfseries\color{accent}\fontsize{11.8}{14}\selectfont #1\par}%
-  \vspace{0.2em}{\color{rule}\hrule height 0.35pt}\vspace{0.4em}%
+  \vspace{0.25em}{\color{rule}\hrule height 0.35pt}\vspace{0.5em}%
 }
 \newcommand{\entry}[2]{%
-  \par\Needspace{3\baselineskip}\vspace{0.35em}%
+  \par\Needspace{4\baselineskip}\vspace{0.4em}%
   \noindent\begin{minipage}[t]{\dimexpr\linewidth-3cm-0.8em\relax}%
-    \vspace{0pt}\raggedright\fontsize{10.6}{12.3}\selectfont\textbf{#1}\par
+    \vspace{0pt}\raggedright\fontsize{10.6}{13}\selectfont\textbf{#1}\par
   \end{minipage}\hfill
   \begin{minipage}[t]{3cm}%
-    \vspace{0pt}\raggedleft\fontsize{9.5}{11.2}\selectfont\textcolor{muted}{#2}\par
+    \vspace{0pt}\raggedleft\fontsize{9.8}{13}\selectfont\textcolor{muted}{#2}\par
   \end{minipage}\par
 }
 \newcommand{\titleonly}[1]{%
-  \par\Needspace{3\baselineskip}\vspace{0.35em}%
-  {\fontsize{10.6}{12.3}\selectfont\bfseries\raggedright #1\par}%
+  \par\Needspace{4\baselineskip}\vspace{0.4em}%
+  {\fontsize{10.6}{13}\selectfont\bfseries\raggedright #1\par}%
 }
-\newcommand{\note}[1]{\par{\fontsize{9.8}{11.5}\selectfont\color{muted}\raggedright #1\par}}
-\newcommand{\subhead}[1]{\par\Needspace{3\baselineskip}\vspace{0.5em}{\sffamily\small\bfseries\color{muted}#1\par}\vspace{0.1em}}
+\newcommand{\note}[1]{\par\nobreak\vspace{0.04em}{\fontsize{10.2}{12.5}\selectfont\color{muted}\raggedright #1\par}}
+\newcommand{\subhead}[1]{\par\Needspace{4\baselineskip}\vspace{0.55em}{\sffamily\small\bfseries\color{muted}#1\par}\vspace{0.1em}}
 \newenvironment{cvitems}{%
-  \par\begingroup\fontsize{9.8}{11.5}\selectfont\color{muted}%
+  \par\nobreak\begingroup\fontsize{10.2}{12.5}\selectfont\color{muted}%
   \begin{list}{\textbullet}{%
     \setlength{\leftmargin}{1.2em}\setlength{\labelwidth}{0.5em}%
     \setlength{\labelsep}{0.7em}\setlength{\topsep}{0.3em}%
-    \setlength{\partopsep}{0pt}\setlength{\itemsep}{0.12em}\setlength{\parsep}{0pt}}%
+    \setlength{\partopsep}{0pt}\setlength{\itemsep}{0.2em}\setlength{\parsep}{0pt}}%
   \raggedright
 }{\end{list}\endgroup}
 
@@ -77,51 +78,31 @@ PhD Candidate in Economics, University of Amsterdam \& Tinbergen Institute\\
 \par\vspace{0.3em}
 
 \cvsection{Profile}
+\begingroup\fontsize{10.6}{13.4}\selectfont\raggedright
 I study how heterogeneous households and firms, boundedly rational expectations and market
 interactions shape monetary and fiscal policy transmission. I connect heterogeneous-agent
 equilibrium models and agent-based models, using neural-network solvers, simulation-based
 inference and microdata to assess economic mechanisms and the reliability of policy predictions.
+\par\endgroup
 
 \cvsection{Research Interests}
+\begingroup\fontsize{10.6}{13.4}\selectfont\raggedright
 Macroeconomics, heterogeneous-agent models, agent-based modelling, expectations and bounded
 rationality, policy evaluation, networks, simulation-based inference, high-performance computing.
-
-\cvsection{Education}
-\entry{PhD in Economics \textnormal{--- University of Amsterdam}}{2023 --- current}
-\note{Supervisors: Prof.\ dr.\ C.H. Hommes and Prof.\ dr.\ F.P. Pijpers}
-\note{Expected thesis submission: May 2027; expected defence: September 2027}
-\entry{MPhil Economics and Econometrics \textnormal{--- Tinbergen Institute} \textit{(cum laude)}}{2021 --- 2023}
-\note{Specialisation: Complexity, Mathematics, and Computation}
-\note{Thesis: An Agent Based Model of the Dutch Economy}
-\note{Supervisors: Prof.\ dr.\ C.H. Hommes and Prof.\ dr.\ F.P. Pijpers}
-\entry{MSc Econometrics \textnormal{--- University of Amsterdam} \textit{(cum laude)}}{2020 --- 2021}
-\note{Specialisation: Complexity and Economic Behaviour}
-\note{Thesis: Endogenous Financial Instability via Heterogeneous Beliefs}
-\note{Supervisor: Prof.\ dr.\ C.H. Hommes}
-\entry{MSc Economics \textnormal{--- London School of Economics}}{2019 --- 2020}
-\note{Specialisation: Public Economics}
-\note{Thesis: The Inequality of Education using a Two Agent New Keynesian Model}
-\note{Supervisor: Prof.\ dr.\ F. Cowell}
-\entry{Exchange Programme \textnormal{--- Royal Melbourne Institute of Technology}}{2018 --- 2019}
-\note{Minor in Finance and Programming}
-\entry{BSc Economics and Business Economics \textnormal{--- University of Groningen}}{2016 --- 2019}
-\note{Thesis: The Impact of News Coverage on Security Prices}
-\entry{BSc Econometrics \textnormal{--- University of Groningen}}{2015 --- 2018}
-\note{Thesis: Arbitrage Smoothing and Term Structure Models}
+\par\endgroup
 
 \cvsection{Working Papers and Research Software}
 \titleonly{Forecasting with a Dutch Agent-Based Model and Optimally Behaving Households}
 \note{Working paper, with Cars Hommes and Frank Pijpers. \href{https://sghoekstra.github.io/papers/forecasting-dutch-abm.pdf}{PDF}}
 \note{Runner-up, Society for Computational Economics Graduate Student Paper Award, CEF 2026}
+\titleonly{When Do Estimated Macroeconomic Models Misread Wage--Price Transmission?}
+\note{Working paper; single-author. Results are preliminary. Known-truth experiments on misspecification and intervention-response reliability;
+Dutch wage--price transmission and specification sensitivity during the 2022 inflation episode.}
 \titleonly{BeforeIT.jl: High-Performance Agent-Based Macroeconomics Made Easy}
 \note{Research software; package co-author. Developed the validation suite.}
 \note{\href{https://github.com/bancaditalia/BeforeIT.jl}{Package} $\cdot$ \href{https://arxiv.org/abs/2502.13267}{Original preprint (2025)}}
 
-\newpage
 \cvsection{Work in Progress}
-\titleonly{When Do Estimated Macroeconomic Models Misread Wage--Price Transmission?}
-\note{Single-author. Known-truth experiments on misspecification and intervention-response reliability;
-Dutch wage--price transmission and specification sensitivity during the 2022 inflation episode.}
 \titleonly{Shortage or Misallocation? The Welfare Loss from Dutch Housing Policy, 2015--2035}
 \note{Integrating housing, labour mobility, demography and firm dynamics in a macroeconomic
 ABM; calibration and welfare comparisons are ongoing.}
@@ -146,6 +127,31 @@ ABM; calibration and welfare comparisons are ongoing.}
 \item Performed statistical analysis on the survey outcomes
 \end{cvitems}
 
+
+\newpage
+\cvsection{Education}
+\entry{PhD in Economics \textnormal{--- University of Amsterdam}}{2023 --- current}
+\note{Supervisors: Prof.\ dr.\ C.H. Hommes and Prof.\ dr.\ F.P. Pijpers}
+\note{Expected thesis submission: May 2027; expected defence: September 2027}
+\entry{MPhil Economics and Econometrics \textnormal{--- Tinbergen Institute} \textit{(cum laude)}}{2021 --- 2023}
+\note{Specialisation: Complexity, Mathematics, and Computation}
+\note{Thesis: An Agent Based Model of the Dutch Economy}
+\note{Supervisors: Prof.\ dr.\ C.H. Hommes and Prof.\ dr.\ F.P. Pijpers}
+\entry{MSc Econometrics \textnormal{--- University of Amsterdam} \textit{(cum laude)}}{2020 --- 2021}
+\note{Specialisation: Complexity and Economic Behaviour}
+\note{Thesis: Endogenous Financial Instability via Heterogeneous Beliefs}
+\note{Supervisor: Prof.\ dr.\ C.H. Hommes}
+\entry{MSc Economics \textnormal{--- London School of Economics}}{2019 --- 2020}
+\note{Specialisation: Public Economics}
+\note{Thesis: The Inequality of Education using a Two Agent New Keynesian Model}
+\note{Supervisor: Prof.\ dr.\ F. Cowell}
+\entry{Exchange Programme \textnormal{--- Royal Melbourne Institute of Technology}}{2018 --- 2019}
+\note{Minor in Finance and Programming}
+\entry{BSc Economics and Business Economics \textnormal{--- University of Groningen}}{2016 --- 2019}
+\note{Thesis: The Impact of News Coverage on Security Prices}
+\entry{BSc Econometrics \textnormal{--- University of Groningen}}{2015 --- 2018}
+\note{Thesis: Arbitrage Smoothing and Term Structure Models}
+
 \cvsection{Grants}
 \titleonly{NWO Compute Grants --- Snellius}
 \note{Three awarded compute grants of 1,000,000 CPU hours each; 3,000,000 CPU hours in total.}
@@ -163,8 +169,11 @@ ABM; calibration and welfare comparisons are ongoing.}
 \entry{Mathematics 2: Linear Algebra --- Tutor}{2024 --- 2025}
 \entry{Microeconomics for AE --- Tutor}{2023 --- 2024}
 
+
 \newpage
 \cvsection{Presentations}
+\begingroup\fontsize{10.2}{13}\selectfont
+\renewcommand{\arraystretch}{1.04}
 \begin{tabularx}{\linewidth}{@{}p{1.6cm}X@{}}
 2026 & Computing in Economics and Finance (CEF), Society for Computational Economics\\[0.15em]
 2026 & Workshop on Economic Science with Heterogeneous Interacting Agents (WEHIA)\\[0.15em]
@@ -175,9 +184,12 @@ ABM; calibration and welfare comparisons are ongoing.}
 2025 & De Nederlandsche Bank, Amsterdam\\[0.15em]
 2023 & De Nederlandsche Bank, Amsterdam\\
 \end{tabularx}
+\endgroup
 
 \cvsection{Honours and Scholarships}
 \subhead{Honours}
+\entry{Runner-up --- Society for Computational Economics Graduate Student Paper Award}{2026}
+\note{Computing in Economics and Finance (CEF), for Forecasting with a Dutch Agent-Based Model and Optimally Behaving Households.}
 \entry{Cum Laude --- MPhil Economics and Econometrics, Tinbergen Institute}{2023}
 \entry{Cum Laude --- MSc Econometrics, University of Amsterdam}{2021}
 \subhead{Scholarships}
@@ -196,6 +208,8 @@ methods, Blanchard-Kahn conditions and sunspot solutions, the Kalman filter and 
 estimation}
 
 \cvsection{Skills}
+\begingroup\fontsize{10.2}{13}\selectfont
+\renewcommand{\arraystretch}{1.05}
 \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{5.1cm}>{\raggedright\arraybackslash}X@{}}
 Programming & Matlab, Python, R, Julia, C, SQL, Bash\\[0.15em]
 High-performance computing & Parallel computing (MPI, BSPlib, Slurm)\\[0.15em]
@@ -203,8 +217,12 @@ Methods & Agent-based modelling, heterogeneous-agent models, neural-network solv
 simulation-based inference, network methods, machine learning, econometrics,
 dynamic stochastic general equilibrium modelling (Dynare)\\
 \end{tabularx}
+\endgroup
 
 \cvsection{References}
+\begingroup\fontsize{10.2}{12.5}\selectfont
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.1}
 \begin{tabularx}{\linewidth}{@{}XX@{}}
 \textbf{Prof.\ dr.\ C.H. Hommes} & \textbf{Prof.\ dr.\ F.P. Pijpers}\\
 {\small CeNDEF, Faculty of Economics,} & {\small Korteweg-de Vries Institute,}\\
@@ -213,5 +231,6 @@ dynamic stochastic general equilibrium modelling (Dynare)\\
 {\small \href{mailto:c.h.hommes@uva.nl}{c.h.hommes@uva.nl}} &
 {\small \href{mailto:f.p.pijpers@uva.nl}{f.p.pijpers@uva.nl}}\\
 \end{tabularx}
+\endgroup
 
 \end{document}
