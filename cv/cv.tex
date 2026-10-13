@@ -4,13 +4,19 @@
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[margin=2.3cm,bottom=2.0cm]{geometry}
+\usepackage[left=2.05cm,right=2.05cm,top=2.05cm,bottom=2.05cm]{geometry}
+\usepackage{mathpazo}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{microtype}
 \usepackage{xcolor}
 \usepackage{tabularx}
+\usepackage{needspace}
+\usepackage{fancyhdr}
 \usepackage[hidelinks]{hyperref}
 
-\definecolor{rule}{HTML}{B9BCC2}
-\definecolor{accent}{HTML}{1D4F91}
+\definecolor{rule}{HTML}{D0D6DC}
+\definecolor{accent}{HTML}{243F56}
+\definecolor{muted}{HTML}{48535D}
 \hypersetup{
   pdftitle={Curriculum Vitae - Steven Hoekstra},
   pdfauthor={Steven Hoekstra},
@@ -18,42 +24,57 @@
 }
 
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{1em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[L]{\sffamily\scriptsize\color{muted}Steven Hoekstra\enspace\textperiodcentered\enspace Curriculum Vitae}
+\fancyfoot[C]{\sffamily\scriptsize\color{muted}13 October 2026}
+\fancyfoot[R]{\sffamily\scriptsize\color{muted}\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
-% --- helpers ---------------------------------------------------------------
-% \par before any vertical space: \vspace is ignored in horizontal mode, which
-% is what collapsed the gaps between entries. \parfillskip=0pt lets \hfill push
-% the date to the right margin on a paragraph's last line.
-% Keep a section heading with at least the first lines that follow it, so a
-% heading never sits alone at the foot of a page. (needspace is not in the
-% installed TeX set, so this is the classic reserve-then-unreserve trick.)
-\newlength{\nsdim}
-\newcommand{\needspace}[1]{%
-  \par\begingroup\setlength{\nsdim}{#1}%
-  \vskip\nsdim\penalty-100\vskip-\nsdim\endgroup%
-}
+% Dates have a fixed column; titles wrap independently and align at the top.
 \newcommand{\cvsection}[1]{%
-  \par\needspace{5\baselineskip}%
-  \vspace{0.9em}\noindent{\large\bfseries #1}%
-  \par\vspace{0.25em}\noindent{\color{rule}\hrule height 0.6pt}%
-  \par\vspace{0.6em}%
+  \par\Needspace{4\baselineskip}\vspace{0.8em}%
+  {\sffamily\bfseries\color{accent}\fontsize{11.8}{14}\selectfont #1\par}%
+  \vspace{0.2em}{\color{rule}\hrule height 0.35pt}\vspace{0.4em}%
 }
-\newcommand{\entry}[2]{\par\vspace{0.4em}\noindent{\parfillskip=0pt\relax\textbf{#1}\hfill{\small #2}\par}}
-\newcommand{\titleonly}[1]{\par\vspace{0.4em}\noindent\textbf{#1}\par}
-\newcommand{\note}[1]{\par\noindent{\small\raggedright #1\par}}
-\newcommand{\subhead}[1]{\par\vspace{0.6em}\noindent\textit{#1}\par\vspace{0.1em}}
+\newcommand{\entry}[2]{%
+  \par\Needspace{3\baselineskip}\vspace{0.35em}%
+  \noindent\begin{minipage}[t]{\dimexpr\linewidth-3cm-0.8em\relax}%
+    \vspace{0pt}\raggedright\fontsize{10.6}{12.3}\selectfont\textbf{#1}\par
+  \end{minipage}\hfill
+  \begin{minipage}[t]{3cm}%
+    \vspace{0pt}\raggedleft\fontsize{9.5}{11.2}\selectfont\textcolor{muted}{#2}\par
+  \end{minipage}\par
+}
+\newcommand{\titleonly}[1]{%
+  \par\Needspace{3\baselineskip}\vspace{0.35em}%
+  {\fontsize{10.6}{12.3}\selectfont\bfseries\raggedright #1\par}%
+}
+\newcommand{\note}[1]{\par{\fontsize{9.8}{11.5}\selectfont\color{muted}\raggedright #1\par}}
+\newcommand{\subhead}[1]{\par\Needspace{3\baselineskip}\vspace{0.5em}{\sffamily\small\bfseries\color{muted}#1\par}\vspace{0.1em}}
+\newenvironment{cvitems}{%
+  \par\begingroup\fontsize{9.8}{11.5}\selectfont\color{muted}%
+  \begin{list}{\textbullet}{%
+    \setlength{\leftmargin}{1.2em}\setlength{\labelwidth}{0.5em}%
+    \setlength{\labelsep}{0.7em}\setlength{\topsep}{0.3em}%
+    \setlength{\partopsep}{0pt}\setlength{\itemsep}{0.12em}\setlength{\parsep}{0pt}}%
+  \raggedright
+}{\end{list}\endgroup}
 
 \begin{document}
 
 % --- header ----------------------------------------------------------------
-{\Huge\bfseries Steven Hoekstra}\\[0.45em]
+{\fontsize{30}{34}\selectfont\sffamily\bfseries\color{accent}Steven Hoekstra}\\[0.45em]
 {\small
 PhD Candidate in Economics, University of Amsterdam \& Tinbergen Institute\\
 \href{mailto:s.g.hoekstra@uva.nl}{s.g.hoekstra@uva.nl} \quad$\cdot$\quad
 \href{https://sghoekstra.github.io}{sghoekstra.github.io} \quad$\cdot$\quad
 \href{https://github.com/SGHoekstra}{github.com/SGHoekstra}
 }
-\par\vspace{0.35em}{\small Updated 12 October 2026}
+\par\vspace{0.3em}
 
 \cvsection{Profile}
 I study how heterogeneous households and firms, boundedly rational expectations and market
@@ -61,31 +82,31 @@ interactions shape monetary and fiscal policy transmission. I connect heterogene
 equilibrium models and agent-based models, using neural-network solvers, simulation-based
 inference and microdata to assess economic mechanisms and the reliability of policy predictions.
 
-\cvsection{Interests}
+\cvsection{Research Interests}
 Macroeconomics, heterogeneous-agent models, agent-based modelling, expectations and bounded
 rationality, policy evaluation, networks, simulation-based inference, high-performance computing.
 
 \cvsection{Education}
-\entry{PhD in Economics --- University of Amsterdam}{2023 --- current}
+\entry{PhD in Economics \textnormal{--- University of Amsterdam}}{2023 --- current}
 \note{Supervisors: Prof.\ dr.\ C.H. Hommes and Prof.\ dr.\ F.P. Pijpers}
 \note{Expected thesis submission: May 2027; expected defence: September 2027}
-\entry{MPhil Economics and Econometrics --- Tinbergen Institute \textit{(cum laude)}}{2021 --- 2023}
+\entry{MPhil Economics and Econometrics \textnormal{--- Tinbergen Institute} \textit{(cum laude)}}{2021 --- 2023}
 \note{Specialisation: Complexity, Mathematics, and Computation}
 \note{Thesis: An Agent Based Model of the Dutch Economy}
 \note{Supervisors: Prof.\ dr.\ C.H. Hommes and Prof.\ dr.\ F.P. Pijpers}
-\entry{MSc Econometrics --- University of Amsterdam \textit{(cum laude)}}{2020 --- 2021}
+\entry{MSc Econometrics \textnormal{--- University of Amsterdam} \textit{(cum laude)}}{2020 --- 2021}
 \note{Specialisation: Complexity and Economic Behaviour}
 \note{Thesis: Endogenous Financial Instability via Heterogeneous Beliefs}
 \note{Supervisor: Prof.\ dr.\ C.H. Hommes}
-\entry{MSc Economics --- London School of Economics}{2019 --- 2020}
+\entry{MSc Economics \textnormal{--- London School of Economics}}{2019 --- 2020}
 \note{Specialisation: Public Economics}
 \note{Thesis: The Inequality of Education using a Two Agent New Keynesian Model}
 \note{Supervisor: Prof.\ dr.\ F. Cowell}
-\entry{Exchange Programme --- Royal Melbourne Institute of Technology}{2018 --- 2019}
+\entry{Exchange Programme \textnormal{--- Royal Melbourne Institute of Technology}}{2018 --- 2019}
 \note{Minor in Finance and Programming}
-\entry{BSc Economics and Business Economics --- University of Groningen}{2016 --- 2019}
+\entry{BSc Economics and Business Economics \textnormal{--- University of Groningen}}{2016 --- 2019}
 \note{Thesis: The Impact of News Coverage on Security Prices}
-\entry{BSc Econometrics --- University of Groningen}{2015 --- 2018}
+\entry{BSc Econometrics \textnormal{--- University of Groningen}}{2015 --- 2018}
 \note{Thesis: Arbitrage Smoothing and Term Structure Models}
 
 \cvsection{Working Papers and Research Software}
@@ -96,6 +117,7 @@ rationality, policy evaluation, networks, simulation-based inference, high-perfo
 \note{Research software; package co-author. Developed the validation suite.}
 \note{\href{https://github.com/bancaditalia/BeforeIT.jl}{Package} $\cdot$ \href{https://arxiv.org/abs/2502.13267}{Original preprint (2025)}}
 
+\newpage
 \cvsection{Work in Progress}
 \titleonly{When Do Estimated Macroeconomic Models Misread Wage--Price Transmission?}
 \note{Single-author. Known-truth experiments on misspecification and intervention-response reliability;
@@ -104,6 +126,44 @@ Dutch wage--price transmission and specification sensitivity during the 2022 inf
 \note{Integrating housing, labour mobility, demography and firm dynamics in a macroeconomic
 ABM; calibration and welfare comparisons are ongoing.}
 
+\cvsection{Work Experience}
+\entry{De Nederlandsche Bank --- PhD Intern}{Apr.\ --- Dec.\ 2025}
+\begin{cvitems}
+\item Implemented the Bank of Canada CANVAS agent-based model for the Netherlands
+\item Estimated inflation channels using neural ratio estimation
+\item Wrote a note on the wage-price channel using this estimated model
+\end{cvitems}
+\entry{Statistics Netherlands (CBS) --- Thesis Intern}{Mar.\ --- Sept.\ 2023}
+\begin{cvitems}
+\item Calibrated the agent-based model of Poledna et al.\ (2023) with Dutch register and national accounts data
+\item Developed an extension incorporating optimal consumption
+\item Ran simulations with both models and analysed their internal dynamics
+\end{cvitems}
+\entry{SEO Amsterdam Economics --- Research Assistant}{2020 --- 2021}
+\begin{cvitems}
+\item Researched academic pressure among secondary school students
+\item Conducted stakeholder interviews and set up a nationwide survey
+\item Performed statistical analysis on the survey outcomes
+\end{cvitems}
+
+\cvsection{Grants}
+\titleonly{NWO Compute Grants --- Snellius}
+\note{Three awarded compute grants of 1,000,000 CPU hours each; 3,000,000 CPU hours in total.}
+
+\cvsection{Teaching}
+\subhead{Graduate}
+\entry{Behavioural Macro and Finance --- Lecturer}{2025}
+\note{Developed and taught the MSc lecture series with Cars Hommes, University of Amsterdam.}
+\titleonly{MPhil guest lectures --- Tinbergen Institute}
+\note{Annual guest lectures in Behavioural Macroeconomics and Complexity.}
+\subhead{Undergraduate}
+\titleonly{BSc Econometrics thesis supervision --- University of Amsterdam}
+\note{Ongoing.}
+\entry{Mathematics 3: Advanced Linear Algebra --- Tutor}{2025 --- 2026}
+\entry{Mathematics 2: Linear Algebra --- Tutor}{2024 --- 2025}
+\entry{Microeconomics for AE --- Tutor}{2023 --- 2024}
+
+\newpage
 \cvsection{Presentations}
 \begin{tabularx}{\linewidth}{@{}p{1.6cm}X@{}}
 2026 & Computing in Economics and Finance (CEF), Society for Computational Economics\\[0.15em]
@@ -116,39 +176,7 @@ ABM; calibration and welfare comparisons are ongoing.}
 2023 & De Nederlandsche Bank, Amsterdam\\
 \end{tabularx}
 
-\cvsection{Work Experience}
-\entry{De Nederlandsche Bank --- PhD Intern}{Apr.\ --- Dec.\ 2025}
-\note{$\cdot$ Implemented the Bank of Canada CANVAS agent-based model for the Netherlands}
-\note{$\cdot$ Estimated inflation channels using neural ratio estimation}
-\note{$\cdot$ Wrote a note on the wage-price channel using this estimated model}
-\entry{Statistics Netherlands (CBS) --- Thesis Intern}{Mar.\ --- Sept.\ 2023}
-\note{$\cdot$ Calibrated the agent-based model of Poledna et al.\ (2023) with Dutch register and national accounts data}
-\note{$\cdot$ Developed an extension incorporating optimal consumption}
-\note{$\cdot$ Ran simulations with both models and analysed their internal dynamics}
-\entry{SEO Amsterdam Economics --- Research Assistant}{2020 --- 2021}
-\note{$\cdot$ Researched academic pressure among secondary school students}
-\note{$\cdot$ Conducted stakeholder interviews and set up a nationwide survey}
-\note{$\cdot$ Performed statistical analysis on the survey outcomes}
-
-\cvsection{Research Computing Allocations}
-\titleonly{Snellius supercomputer}
-\note{Three awarded allocations of one million CPU hours each (three million CPU hours in total).}
-
-\cvsection{Teaching}
-\subhead{Graduate}
-\entry{Behavioural Macro and Finance --- Lecturer}{2025}
-\note{Developed and taught the MSc lecture series with Cars Hommes, University of Amsterdam.}
-\titleonly{MPhil guest lectures --- Tinbergen Institute}
-\note{Annual guest lectures in Behavioural Macroeconomics and Complexity.}
-\newpage
-\subhead{Undergraduate}
-\titleonly{BSc Econometrics thesis supervision --- University of Amsterdam}
-\note{Ongoing.}
-\entry{Mathematics 3: Advanced Linear Algebra --- Tutor}{2025 --- 2026}
-\entry{Mathematics 2: Linear Algebra --- Tutor}{2024 --- 2025}
-\entry{Microeconomics for AE --- Tutor}{2023 --- 2024}
-
-\cvsection{Achievements}
+\cvsection{Honours and Scholarships}
 \subhead{Honours}
 \entry{Cum Laude --- MPhil Economics and Econometrics, Tinbergen Institute}{2023}
 \entry{Cum Laude --- MSc Econometrics, University of Amsterdam}{2021}
