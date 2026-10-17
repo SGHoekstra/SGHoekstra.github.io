@@ -74,7 +74,7 @@ main { padding: 2.75rem 0 4rem; }
 /* Hero -------------------------------------------------------------- */
 .hero { display: grid; grid-template-columns: 168px 1fr; gap: 2rem; align-items: start; }
 .hero .portrait {
-  width: 168px; height: 210px; object-fit: cover; border-radius: 6px;
+  width: 180px; height: 180px; object-fit: cover; border-radius: 50%;
   border: 1px solid var(--line); background: var(--bg-soft); display: block;
 }
 .hero .title { font-family: var(--sans); color: var(--muted); font-size: 0.98rem; margin: 0.5rem 0 1.25rem; line-height: 1.5; }
@@ -154,7 +154,7 @@ dl.rows dd { margin: 0; }
   body { font-size: 16px; }
   h1 { font-size: 1.75rem; }
   .hero { grid-template-columns: 1fr; gap: 1.25rem; }
-  .hero .portrait { width: 132px; height: 165px; }
+  .hero .portrait { width: 140px; height: 140px; }
   dl.rows div { grid-template-columns: 1fr; gap: 0.15rem; }
 }
 
